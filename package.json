@@ -1,0 +1,17 @@
+{
+  "name": "efrem-ghebre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --port=8081"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
