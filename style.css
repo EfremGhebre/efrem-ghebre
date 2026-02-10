@@ -38,7 +38,7 @@ body {
   padding: var(--app-pad);
   height: calc(100vh - var(--frame-gap));
   align-items: start;
-  max-width: 2180px;
+  max-width: 2380px;
   margin: calc(var(--frame-gap) / 2) auto;
 }
 

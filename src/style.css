@@ -8,7 +8,7 @@
   --accent: #da4113;
   --shadow: 0 12px 32px rgba(90, 90, 93, 0.45);
   --radius: 20px;
-  --card-radius: 22px;
+  --card-radius: 0px;
   --app-pad: 24px;
   --frame-gap: 48px;
 }
@@ -38,7 +38,7 @@ body {
   padding: var(--app-pad);
   height: calc(100vh - var(--frame-gap));
   align-items: start;
-  max-width: 1180px;
+  max-width: 2380px;
   margin: calc(var(--frame-gap) / 2) auto;
 }
 
