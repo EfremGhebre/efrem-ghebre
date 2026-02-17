@@ -1,0 +1,40 @@
+:root {
+  color-scheme: dark;
+  --bg: #313336;
+  --panel: rgba(25, 25, 26, 0.532);
+  --panel-border: rgba(255, 255, 255, 0.06);
+  --text: #e36b3b;
+  --muted: #a8b0b8;
+  --accent: #ff7700;
+  --shadow: 0 12px 32px rgba(90, 90, 93, 0.45);
+  --radius: 20px;
+  --card-radius: 10px;
+  --app-pad: 80px;
+  --frame-gap: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 25px;
+  background-color: var(--bg);
+  background-image: url("https://cdn.prod.website-files.com/6292458ea6c91805d3cb2506/629759bce5f0f5ed3d86fe81_bg-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text);
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

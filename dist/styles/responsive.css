@@ -1,0 +1,44 @@
+@media (max-width: 980px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-shell {
+    position: static;
+    padding: 0;
+    margin: 0;
+  }
+
+  .panel {
+    position: static;
+    opacity: 1;
+    transform: none;
+    padding: 24px;
+    transition: none;
+  }
+
+  .grid.cards-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .panel {
+    transform: none;
+  }
+}
