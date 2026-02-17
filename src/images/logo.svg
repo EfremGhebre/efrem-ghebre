@@ -1,0 +1,9 @@
+<svg width="420" height="120" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="120" rx="20" fill="#1B1C1F"/>
+  <rect x="12" y="12" width="96" height="96" rx="16" fill="#FF7700"/>
+  <path d="M40 78V42H84" stroke="#0B0F14" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 60H74" stroke="#0B0F14" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M152 46H188C197 46 204 53 204 62C204 71 197 78 188 78H152V46Z" stroke="#E36B3B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M222 78V46H256C265 46 272 53 272 62C272 71 265 78 256 78H222Z" stroke="#E36B3B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="152" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#A8B0B8" letter-spacing="2">PORTFOLIO</text>
+</svg>
