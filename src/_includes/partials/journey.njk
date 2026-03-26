@@ -1,0 +1,48 @@
+<section class="journey-section">
+  <h2 data-i18n="journey.title">GitHub</h2>
+  <p class="journey-subtitle" data-i18n="journey.intro">Open Source Projects</p>
+  <div class="about-underline" role="presentation"></div>
+
+  <div class="journey-feed" role="list" id="journey-repos">
+    {% for repo in githubRepos %}
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>{{ repo.name }}</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ {{ repo.stars or 0 }}</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ {{ repo.forks or 0 }}</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        {% if repo.description %}
+          {{ repo.description }}
+        {% else %}
+          <span data-i18n="journey.noDescription">No description provided.</span>
+        {% endif %}
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
+          {% if repo.languages and repo.languages.length %}
+            {% for language in repo.languages %}
+              <span>{{ language }}</span>
+            {% endfor %}
+          {% else %}
+            <span data-i18n="journey.techStackTbd">Tech stack TBD</span>
+          {% endif %}
+        </div>
+        <a class="journey-repo-link" href="{{ repo.html_url }}" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

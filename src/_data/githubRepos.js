@@ -60,7 +60,9 @@ module.exports = async () => {
           name: repo.name,
           description: repo.description,
           html_url: repo.html_url,
-          languages
+          languages,
+          stars: repo.stargazers_count ?? 0,
+          forks: repo.forks_count ?? 0
         };
       })
     );

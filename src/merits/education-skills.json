@@ -4,7 +4,7 @@
         "title": "Systemutveckling .NET",
         "date": "4 sep 2023 - 25 apr 2025",
         "location": "Distans",
-        "description": "Studerar YH-programmet Systemutvecklare .NET med AI kompetens via EduGrade."
+        "description": "YH-program i Systemutveckling .NET med AI-inriktning (EduGrade). Fokus på backendutveckling, databaser och moderna webbapplikationer."
       },   
       
       {
@@ -14,35 +14,38 @@
         "description": "Läst allmänna gymnasiestudier."
       }
     ],
-    "Kurser": [
-      {
-        "title": "Programmering 1",
-        "date": "jan 2023 - juni 2023",
-        "location": "Hermods, Distans",
-        "description": "Läste Programmering 1 med inriktning i C# via Hermods Komvux."
-      },
-      {
-        "title": "Kurser i Datanätverk",
-        "date": "aug 2020 - dec 2020",
-        "location": "LTU, Skellefteå Campus, Skellefteå",
-        "description": "Läste kurser Matematik för nätverkstekniker samt Digitala och analoga system i programmet Datanätverk vid Luleå tekniska universitet i Skellefteå."
-      },
-      {
-        "title": "Kurs i förhandlingsteknik",
-        "date": "mar 2011",
-        "location": "Riyadh, Saudi Arabia",
-        "description": "Genomgått 3 olika workshop via Gameplan institut: att förbättra förhandlingsteknik, utbildning om verkställande verksamhet genom KPI, detaljhandels & påverkande sälj färdigheter."
-      },
-      {
-        "title": "Kurs i presentationsteknik",
-        "date": "apr 2009",
-        "location": "Riyadh, Saudi Arabia",
-        "description": "2 dagars workshop för att förbättra presentationsteknik via Progress management consultants."
-      },
-      {
-        "title": "Kompetensutvecklingskurs",
-        "date": "2009",
-        "location": "Riyadh, Saudi Arabia",
-        "description": "6 dagars kurs på avancerad program för sälj handledare."
-      } ]
-}   
+    
+      "Kurser": [
+        {
+          "title": "Programmering 1",
+          "date": "jan 2023 – juni 2023",
+          "location": "Hermods, Distans",
+          "description": "Grundläggande programmering i C# med fokus på problemlösning och logik."
+        },
+        {
+          "title": "Datanätverk (kurser)",
+          "date": "aug 2020 – dec 2020",
+          "location": "LTU, Skellefteå",
+          "description": "Studier i nätverksteknik, inklusive matematik för nätverk samt digitala och analoga system."
+        },
+        {
+          "title": "Förhandlingsteknik",
+          "date": "mar 2011",
+          "location": "Riyadh, Saudiarabien",
+          "description": "Workshops i förhandling, KPI-styrning och påverkande försäljning."
+        },
+        {
+          "title": "Presentationsteknik",
+          "date": "apr 2009",
+          "location": "Riyadh, Saudiarabien",
+          "description": "Workshop i presentation och kommunikationsteknik."
+        },
+        {
+          "title": "Ledarskap & Säljutveckling",
+          "date": "2009",
+          "location": "Riyadh, Saudiarabien",
+          "description": "Avancerad utbildning för säljledare med fokus på teamledning och prestation."
+        }
+      ]
+    }
+ 

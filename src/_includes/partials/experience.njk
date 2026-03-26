@@ -1,0 +1,25 @@
+  <h2 data-i18n="experience.title">Work Experience</h2>
+  <p class="work-intro" data-i18n="experience.intro">Highlights from my professional roles and responsibilities.</p>
+  <div class="about-underline" role="presentation"></div>
+  <div class="section-divider" role="presentation"></div>
+  <div class="experience-timeline" role="list">
+    {% for item in workExperience %}
+    {% set role = loop.index0 %}
+    <article class="experience-item" role="listitem">
+      <div class="experience-content">
+        <h3 data-i18n="experience.entries.{{ role }}.title">{{ item.title }}</h3>
+        <p class="experience-company">
+          <span data-i18n="experience.entries.{{ role }}.company">{{ item.company }}</span>{% if item.location %} · <span data-i18n="experience.entries.{{ role }}.location">{{ item.location }}</span>{% endif %}
+        </p>
+        <p class="experience-period" data-i18n="experience.entries.{{ role }}.period">{{ item.date }}</p>
+        {% if item.details and item.details.length %}
+        <ul class="experience-description-list">
+          {% for detail in item.details %}
+          <li data-i18n="experience.entries.{{ role }}.details.{{ loop.index0 }}">{{ detail }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>

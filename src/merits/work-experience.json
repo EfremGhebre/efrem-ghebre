@@ -1,46 +1,88 @@
 {
-    "Arbetslivserfarenhet": [
-        {
-        "title": "Projektledare",
-        "date": "aug 2022 - sep 2023",
-        "company": "Robertsfors Kommun, Robertsfors",
-        "description": "- Jobbade med utrikes födda nyanlända och informerade om bl.a. arbetsmarknadskunskap och SO. - Anordnade studiebesök och praktikplatser till deltagare. Uppföljning med arbetsgivare om praktikantens utveckling."
-        },
-        {
-        "title": "Projektledare",
-        "date": "mar 2018 - dec 2019",
-        "company": "Robertsfors Kommun, Robertsfors",
-        "description": "- Assistera och förberedda arbetssökandena att hitta jobb (t.ex. CV, personligt brev). - Hitta praktikplatser och ordna studiebesök hos arbetsgivare. - Språkstöd för arbets-givare/tagare vid informationsträffar."
-        },
-        {
-        "title": "Assistent",
-        "date": "jun 2017 - mar 2018",
-        "company": "Arbertsförmedlingen, Robertsfors",
-        "description": "- Allmänt kontorsarbete, sprida ny information om regler och förändringar till arbetssökandena i etableringsprogram. - Språkstöd för arbetsförmedlarna vid personliga möten och inskrivningar. - Uppföljningar med arbetsgivare och arbetstagare efter anställningar eller praktik."
-        },
-        {
-        "title": "Project Incharge",
-        "date": "sep 2012 - apr 2014",
-        "company": "Al Marai company (IPNC avdelning), Jidda, Saudiarabien",
-        "description": "- Projektledning av ett nytt lanserad projekt i samarbete med Mead Johnson i USA. - Samordning och ledarskap av fem läkemedels representanter samt 66 säljledare i nordvästra regionen. - Övervaka lager tillgänglighet, försäljning och leverans till sjukhus, apotek och supermarket. - Regelbund besök och kontroll av yttre depåer i regionen samt befintliga kunder för att säkerställa kund nöjdhet och produkt tillgänglighet."
-        },
-        {
-        "title": "Försäljningshandledare och TF försäljningschef",
-        "date": "jan 2008 - sep 2012",
-        "company": "Al Marai company (mejeri avdelning), Jidda, Saudiarabien",
-        "description": "- Övervaka och leda ett säljteam av 22 försäljare och assistenter. - Uppnå företagets uppsatta mål, utbilda personal, upprätthålla och utveckla distributions plan. - Kontrollera budget och säkerställa marknadens behov genom ett besöka kunderna regelbundet. - Samordna och leda ett säljteam av 5 försäljningsansvariga och övervaka de dagliga försäljningsutvecklingarna. - Uppföljning av dagliga och veckovisa mål för att stödja teamet att uppnå önskade mål."
-        },
-        {
-        "title": "Key Account Manager/säljare",
-        "date": "maj 2005 - dec 2007",
-        "company": "Al Marai company (mejeri avdelning), Jidda, Saudiarabien",
-        "description": "- Göra prognos och beställa produkter i förenligt efterfrågan på marknaden efter klimatförhållande. - Distribution och leverans av mejeri produkter enligt marknadsbehov. - Insamling av betalningarna och undersökning av kund nöjdhet enligt företagspolicy. - Kontroll av produkters tillgänglighet samt säkerställa att företagets kylkedjehantering och kvalitetspolicy följs."
-        },
-        {
-        "title": "Marknadsföring och gruppledare",
-        "date": "mar 2000 - dec 2004",
-        "company": "Salim Mohammed Bakhashwen & sons AB (SEB & TEFAL grupp), Jidda, Saudiarabien",
-        "description": "- Arrangera marknadsföring och insamling av beställningar och betalningar från centrala butiker. - Samordna leverans av köksredskap till företagets egna butiker samt externa kunder. - Säkerställa till att produkterna visades på ett attraktivt och säljbart sätt i butiker."
-        }
-    ]
+  "workExperience": [
+    {
+      "title": "Projektledare",
+      "company": "Robertsfors Kommun",
+      "location": "Robertsfors, Sverige",
+      "period": "Aug 2022 – Sep 2023",
+      "highlights": [
+        "Stöttade nyanlända i etablering genom arbetsmarknadsintroduktion och samhällsorientering.",
+        "Planerade och organiserade praktikplatser samt studiebesök.",
+        "Följde upp deltagarnas utveckling i samarbete med arbetsgivare.",
+        "Arbetade strukturerat med uppföljning, koordinering och kommunikation mellan flera parter."
+      ]
+    },
+    {
+      "title": "Projektledare",
+      "company": "Robertsfors Kommun",
+      "location": "Robertsfors, Sverige",
+      "period": "Mar 2018 – Dec 2019",
+      "highlights": [
+        "Stöttade arbetssökande i jobbsökning (CV, personligt brev och intervjuförberedelse).",
+        "Identifierade och etablerade praktikmöjligheter i samarbete med arbetsgivare.",
+        "Organiserade studiebesök och arbetsmarknadsaktiviteter.",
+        "Agerade språkstöd och länk mellan arbetssökande och arbetsgivare."
+      ]
+    },
+    {
+      "title": "Assistent",
+      "company": "Arbetsförmedlingen",
+      "location": "Robertsfors, Sverige",
+      "period": "Jun 2017 – Mar 2018",
+      "highlights": [
+        "Administrativt stöd inom etableringsprogrammet och informationshantering.",
+        "Språkstöd vid möten, inskrivningar och kommunikation med deltagare.",
+        "Uppföljning av praktik- och anställningsprocesser tillsammans med arbetsgivare.",
+        "Bidrog till strukturerade arbetsflöden och effektiv informationsspridning."
+      ]
+    },
+    {
+      "title": "Project Incharge",
+      "company": "Almarai Company (IPNC Division)",
+      "location": "Jeddah, Saudiarabien",
+      "period": "Sep 2012 – Apr 2014",
+      "highlights": [
+        "Ledde lansering av nytt projekt i samarbete med Mead Johnson (USA).",
+        "Samordnade och ledde team bestående av representanter och säljledare i regionen.",
+        "Övervakade lager, försäljning och distribution till sjukhus och apotek.",
+        "Säkerställde effektiv koordinering och måluppfyllelse i projektets olika faser."
+      ]
+    },
+    {
+      "title": "Sales Supervisor / Acting Sales Manager",
+      "company": "Almarai Company (Dairy Division)",
+      "location": "Jeddah, Saudiarabien",
+      "period": "Jan 2008 – Sep 2012",
+      "highlights": [
+        "Ledde och utvecklade ett säljteam om 22 personer.",
+        "Ansvarade för budget, försäljningsmål och distributionsplanering.",
+        "Följde upp dagliga och veckovisa prestationer för att säkerställa måluppfyllelse.",
+        "Arbetade med ledarskap, coaching och optimering av teamets resultat."
+      ]
+    },
+    {
+      "title": "Key Account Manager",
+      "company": "Almarai Company (Dairy Division)",
+      "location": "Jeddah, Saudiarabien",
+      "period": "May 2005 – Dec 2007",
+      "highlights": [
+        "Ansvarade för nyckelkunder och långsiktiga affärsrelationer.",
+        "Prognostiserade efterfrågan och optimerade produktdistribution.",
+        "Säkerställde betalningsflöden och kundnöjdhet enligt företagets riktlinjer.",
+        "Arbetade med datadriven uppföljning av försäljning och lager."
+      ]
+    },
+    {
+      "title": "Marketing & Team Leader",
+      "company": "Salim Mohammed Bakhashwen & Sons (SEB & Tefal Group)",
+      "location": "Jeddah, Saudiarabien",
+      "period": "Mar 2000 – Dec 2004",
+      "highlights": [
+        "Planerade och genomförde marknadsaktiviteter samt kampanjer.",
+        "Koordinerade orderhantering och leveranser till butiker och kunder.",
+        "Säkerställde attraktiv produktpresentation i butik för ökad försäljning.",
+        "Ledde team och bidrog till effektiv daglig drift och kundupplevelse."
+      ]
     }
+  ]
+}
