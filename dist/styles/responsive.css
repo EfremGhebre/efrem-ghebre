@@ -1,32 +1,491 @@
-@media (max-width: 980px) {
+/* Tablet layout: 768px - 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+  :root {
+    --app-pad: 20px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
   .app {
-    grid-template-columns: 1fr;
+    grid-template-columns: 74px 240px minmax(0, 1fr);
+    height: calc(100dvh - var(--frame-gap));
+    row-gap: 10px;
+  }
+
+  .app.profile-hidden {
+    grid-template-columns: 74px minmax(0, 1fr);
+  }
+
+  .rail {
+    padding: 10px 6px;
+  }
+
+  .rail button {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+  }
+
+  .rail .lang-toggle,
+  .rail .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .rail svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .profile {
+    padding: 16px 12px;
+    gap: 12px;
+  }
+
+  .profile-media {
+    width: 150px;
+    height: 150px;
+    min-height: 150px;
+  }
+
+  .profile h1 {
+    font-size: clamp(24px, 3.4vw, 30px);
+  }
+
+  .profile .role {
+    font-size: 14px;
   }
 
   .panel-shell {
-    position: static;
-    padding: 0;
-    margin: 0;
+    padding: 18px;
   }
 
   .panel {
-    position: static;
-    opacity: 1;
+    padding: 20px;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .panel h2,
+  .about-section h2,
+  .skills-dashboard h2 {
+    font-size: clamp(28px, 4.3vw, 34px);
+  }
+
+  .work-intro,
+  .about-intro,
+  #contact .contact-description,
+  #projects .portfolio-card-content p {
+    max-width: 62ch;
+    line-height: 1.58;
+  }
+
+  /* Services / what I do = 2 columns on tablet */
+  .about-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  /* Projects keep side-by-side where possible */
+  #projects .portfolio-card {
+    grid-template-columns: minmax(220px, 40%) 1fr;
+  }
+
+  #projects .portfolio-card-media {
+    margin: 10px;
+    min-height: 230px;
+    height: auto;
+  }
+
+  #projects .portfolio-card-content {
+    padding: 18px 18px 20px;
+  }
+
+  #projects .portfolio-card-content h3 {
+    font-size: clamp(26px, 3.5vw, 32px);
+  }
+
+  #projects .portfolio-actions {
+    flex-wrap: wrap;
+  }
+
+  /* Education & skills = 2 columns */
+  .skills-dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .skills-panel {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  /* Experience timeline stays timeline with tighter spacing */
+  .experience-timeline {
+    gap: 24px;
+    padding-left: 44px;
+  }
+
+  .experience-timeline::before {
+    left: 14px;
+  }
+
+  .experience-item::before {
+    left: -38px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .experience-content h3 {
+    font-size: clamp(23px, 3.5vw, 28px);
+  }
+
+  /* Contact keeps 2 columns with reduced gap */
+  #contact .contact-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  #contact .contact-availability {
+    padding: 18px;
+  }
+}
+
+/* Narrow tablet fallback: stack project media/content */
+@media (max-width: 900px) and (min-width: 768px) {
+  #projects .portfolio-card {
+    grid-template-columns: 1fr;
+  }
+
+  #projects .portfolio-card-media {
+    min-height: 210px;
+    max-height: 260px;
+  }
+}
+
+/* Mobile layout: below 768px */
+@media (max-width: 767px) {
+  :root {
+    --app-pad: 12px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    height: 100dvh;
+    gap: 10px;
+  }
+
+  .app.profile-hidden {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  /* Sidebar becomes top bar */
+  .rail {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: var(--card-radius);
+    border-top-right-radius: var(--card-radius);
+    border-bottom-right-radius: var(--card-radius);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .rail-main {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 6px;
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    padding-right: 8px;
+  }
+
+  .rail-main::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .rail-controls {
+    flex-direction: row;
+    gap: 8px;
+    padding-top: 0;
+  }
+
+  .rail button {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 10px;
+  }
+
+  .rail .lang-toggle,
+  .rail .theme-toggle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .rail svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .profile {
+    width: 100%;
+    height: auto;
+    border-radius: var(--card-radius);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 14px;
+    gap: 12px;
+  }
+
+  .profile-media {
+    width: 124px;
+    height: 124px;
+    min-height: 124px;
+    margin: 4px auto;
+  }
+
+  .profile h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .profile .role {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .profile-actions {
+    gap: 12px;
+  }
+
+  .socials a,
+  .socials-button {
+    min-height: 44px;
+  }
+
+  .panel-shell {
+    min-height: 0;
+    height: 100%;
+    padding: 10px;
+    border-radius: var(--card-radius);
+    border-top-left-radius: var(--card-radius);
+    border-bottom-left-radius: var(--card-radius);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .panel {
+    padding: 14px;
+    -webkit-mask-image: none;
+    mask-image: none;
     transform: none;
-    padding: 24px;
-    transition: none;
   }
 
-  .grid.cards-4 {
+  .panel h2,
+  .about-section h2,
+  .skills-dashboard h2 {
+    font-size: clamp(26px, 8vw, 32px);
+    line-height: 1.15;
+  }
+
+  .section-title,
+  .about-services-title,
+  .skills-panel-title,
+  #contact .contact-copy h3,
+  #contact .contact-availability-heading {
+    font-size: clamp(20px, 6vw, 24px);
+  }
+
+  .about-meta-summary,
+  .about-intro,
+  .work-intro,
+  #contact .contact-description,
+  .experience-description-list,
+  .journey-repo-desc,
+  #projects .portfolio-card-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .about-meta-summary {
+    text-align: center;
+  }
+
+  .about-intro {
+    margin-bottom: 24px;
+  }
+
+  /* 1 column content layouts */
+  .grid.cards-4,
+  .services-grid,
+  .about-services-grid,
+  .skills-dashboard-grid,
+  .form-row,
+  #contact .contact-layout {
     grid-template-columns: 1fr;
   }
 
-  .services-grid {
+  .about-services-grid {
+    gap: 16px;
+  }
+
+  /* Projects stack with full width media */
+  #projects .portfolio-list {
+    gap: 16px;
+  }
+
+  #projects .portfolio-card {
     grid-template-columns: 1fr;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
+  #projects .portfolio-card-media {
+    width: auto;
+    height: auto;
+    min-height: 200px;
+    margin: 10px 10px 0;
+  }
+
+  #projects .portfolio-card-content {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  #projects .portfolio-card-content h3 {
+    font-size: clamp(24px, 7vw, 28px);
+  }
+
+  #projects .portfolio-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #projects .portfolio-btn {
+    width: 100%;
+  }
+
+  /* Work experience becomes stacked cards */
+  .experience-timeline {
+    padding-left: 0;
+    gap: 14px;
+  }
+
+  .experience-timeline::before,
+  .experience-item::before {
+    display: none;
+  }
+
+  .experience-item {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid color-mix(in srgb, var(--card-rich-border) 82%, white 18%);
+    background: var(--card-rich-bg);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  }
+
+  .experience-content h3 {
+    font-size: clamp(20px, 6.3vw, 24px);
+  }
+
+  .experience-description-list {
+    padding-left: 16px;
+  }
+
+  #contact .contact-layout {
+    gap: 16px;
+  }
+
+  #contact .contact-availability {
+    padding: 16px;
+  }
+
+  #contact .contact-detail {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  #contact .contact-detail-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  #contact .contact-detail-value {
+    font-size: 16px;
+  }
+
+  .journey-repo-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .journey-repo-name-wrap h3 {
+    white-space: normal;
+  }
+
+  .journey-repo-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-image-lightbox {
+    padding: 14px;
+  }
+}
+
+/* Touch feedback: replace hover-lift with subtle tap feedback */
+@media (hover: none) {
+  :is(
+    .service-card,
+    .repo-card,
+    .card,
+    .about-service-card,
+    .skills-panel,
+    .skills-list-item,
+    .journey-repo-card,
+    #projects .portfolio-card,
+    .project-card
+  ):hover,
+  :is(
+    .service-card,
+    .repo-card,
+    .card,
+    .about-service-card,
+    .skills-panel,
+    .skills-list-item,
+    .journey-repo-card,
+    #projects .portfolio-card,
+    .project-card
+  ):focus-within {
+    transform: none;
+    box-shadow: inherit;
+  }
+
+  :is(
+    .rail button,
+    .socials-button,
+    .project-link,
+    #projects .portfolio-btn,
+    #contact .contact-action,
+    .socials a
+  ):active {
+    transform: scale(0.98);
   }
 }
 

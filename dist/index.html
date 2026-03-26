@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Efrem's Portfolio</title>
+    <title data-i18n="head.title">Efrem's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="app">
-      <nav class="rail" aria-label="Primary">
-  <button type="button" data-target="about" aria-current="page" aria-label="About panel" title="About">
+      <nav class="rail" aria-label="Primary" data-i18n-aria-label="nav.primary">
+  <div class="rail-main">
+  <button type="button" data-target="about" aria-current="page" aria-label="About panel" title="About" data-i18n-aria-label="nav.about.aria" data-i18n-title="nav.about.title">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         d="M12 12a3.5 3.5 0 1 0-3.5-3.5A3.5 3.5 0 0 0 12 12Zm-6 8a6 6 0 0 1 12 0"
@@ -21,7 +22,7 @@
       />
     </svg>
   </button>
-  <button type="button" data-target="projects" aria-label="Projects panel" title="Projects">
+  <button type="button" data-target="projects" aria-label="Projects panel" title="Projects" data-i18n-aria-label="nav.projects.aria" data-i18n-title="nav.projects.title">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         d="M4 6h7v12H4zM13 6h7v7h-7zM13 15h7v3h-7z"
@@ -33,7 +34,7 @@
       />
     </svg>
   </button>
-  <button type="button" data-target="experience" aria-label="Work experience panel" title="Work experience">
+  <button type="button" data-target="experience" aria-label="Work experience panel" title="Work experience" data-i18n-aria-label="nav.experience.aria" data-i18n-title="nav.experience.title">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         d="M7 7h10a2 2 0 0 1 2 2v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9a2 2 0 0 1 2-2Zm3-2h4"
@@ -45,7 +46,7 @@
       />
     </svg>
   </button>
-  <button type="button" data-target="journey" aria-label="Journey panel" title="Journey">
+  <button type="button" data-target="journey" aria-label="Journey panel" title="Journey" data-i18n-aria-label="nav.journey.aria" data-i18n-title="nav.journey.title">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         d="M5 6h14M5 10h14M5 14h10"
@@ -60,7 +61,7 @@
       <circle cx="16" cy="18" r="1.5" fill="currentColor" />
     </svg>
   </button>
-  <button type="button" data-target="education" aria-label="Education and skills panel" title="Education & skills">
+  <button type="button" data-target="education" aria-label="Education and skills panel" title="Education & skills" data-i18n-aria-label="nav.education.aria" data-i18n-title="nav.education.title">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         d="M3 7l9-4 9 4-9 4-9-4Zm0 0v6l9 4 9-4V7"
@@ -72,7 +73,7 @@
       />
     </svg>
   </button>
-  <button type="button" data-target="contact" aria-label="Contact panel" title="Contact">
+  <button type="button" data-target="contact" aria-label="Contact panel" title="Contact" data-i18n-aria-label="nav.contact.aria" data-i18n-title="nav.contact.title">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         d="M4 6h16v12H4z"
@@ -92,1141 +93,1571 @@
       />
     </svg>
   </button>
+  </div>
+  <div class="rail-controls">
+  <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Switch language" data-i18n-aria-label="lang.toggleLabel" title="Switch language" data-i18n-title="lang.toggleLabel">
+    EN
+  </button>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M13.5 2.25a.75.75 0 0 1 .694 1.035A8.25 8.25 0 1 0 20.715 9.81a.75.75 0 0 1 1.035.694v.243A9.75 9.75 0 1 1 13.257 2.25h.243Z"/>
+    </svg>
+  </button>
+  </div>
 </nav>
 
-      <section class="profile" aria-label="Profile">
-  <div class="profile-media" aria-hidden="true"></div>
+      <section class="profile" aria-label="Profile" data-i18n-aria-label="profile.aria">
+  <div class="profile-media">
+    <img src="assets/profile-photo.png" alt="Efrem Ghebre profile photo">
+  </div>
   <div class="profile-footer">
     <h1>Efrem Ghebre</h1>
-    <p class="role">Fullstack Developer</p>
-    <div class="socials" aria-label="Social links">
-      <a href="https://www.linkedin.com" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M6.5 9H4v11h2.5V9Zm-1.25-4A1.45 1.45 0 1 0 5.25 8a1.45 1.45 0 0 0 0-2.9ZM20 14.2c0-3.2-1.7-4.7-4-4.7a3.5 3.5 0 0 0-3.2 1.7V9H10v11h2.5v-6.1c0-1.6.6-2.6 2-2.6s1.8 1.1 1.8 2.6V20H20Z"
-            fill="currentColor"
-          />
-        </svg>
-      </a>
-      <a href="https://github.com" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1-.9-1.2-.9-1.2-.8-.5.1-.5.1-.5 1 .1 1.5 1 1.5 1 .8 1.5 2.2 1.1 2.7.8.1-.6.3-1.1.6-1.3-2.2-.2-4.6-1.1-4.6-4.9 0-1.1.4-2.1 1-2.8-.1-.2-.4-1.2.1-2.5 0 0 .9-.3 2.9 1a10 10 0 0 1 5.2 0c2-1.3 2.9-1 2.9-1 .5 1.3.2 2.3.1 2.5.6.7 1 1.6 1 2.8 0 3.8-2.4 4.7-4.6 4.9.3.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"
-            fill="currentColor"
-          />
-        </svg>
-      </a>
+    <p class="role" data-i18n="profile.role">Full-Stack Developer</p>
+    <div class="profile-actions">
+      <div class="socials" aria-label="Social links" data-i18n-aria-label="profile.socials">
+        <a href="https://www.linkedin.com" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6.5 9H4v11h2.5V9Zm-1.25-4A1.45 1.45 0 1 0 5.25 8a1.45 1.45 0 0 0 0-2.9ZM20 14.2c0-3.2-1.7-4.7-4-4.7a3.5 3.5 0 0 0-3.2 1.7V9H10v11h2.5v-6.1c0-1.6.6-2.6 2-2.6s1.8 1.1 1.8 2.6V20H20Z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+        <a href="https://github.com" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1-.9-1.2-.9-1.2-.8-.5.1-.5.1-.5 1 .1 1.5 1 1.5 1 .8 1.5 2.2 1.1 2.7.8.1-.6.3-1.1.6-1.3-2.2-.2-4.6-1.1-4.6-4.9 0-1.1.4-2.1 1-2.8-.1-.2-.4-1.2.1-2.5 0 0 .9-.3 2.9 1a10 10 0 0 1 5.2 0c2-1.3 2.9-1 2.9-1 .5 1.3.2 2.3.1 2.5.6.7 1 1.6 1 2.8 0 3.8-2.4 4.7-4.6 4.9.3.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+      </div>
+      <a class="socials-button" href="assets/CV Efrem Ghebre.pdf" download data-i18n="profile.resume">Download CV →</a>
     </div>
   </div>
 </section>
 
       <section class="panel-shell" aria-live="polite">
         <article class="panel active" id="about" data-index="0">
-            <h2>about me</h2>
-  <div class="meta-line">Full-Stack Developer · .NET & Modern Web · Available for remote</div>
+          <section class="about-section">
+  <h2 data-i18n="about.title">About Me</h2>
+  <div class="about-underline" role="presentation"></div>
 
-  <p class="work-intro">
-    I’m Efrem, a full-stack developer specializing in .NET and modern web architecture. 
-    I design and build structured, scalable web applications from database to interface. 
-    My background in ASP.NET Core, Entity Framework, and modern frontend technologies 
-    allows me to deliver secure, maintainable systems with polished, performance-focused user experiences.
+  <p class="about-meta-summary">
+    <span data-i18n="about.meta.location">Based in Sweden</span>
+    <span class="about-meta-divider" aria-hidden="true">·</span>
+    <span class="about-meta-accent" data-i18n="about.meta.status">Available for work</span>
+    <span class="about-meta-divider" aria-hidden="true">·</span>
+    <span data-i18n="about.meta.languages">Fluent in 4 languages</span>
   </p>
 
-  <div class="section-divider" role="presentation"></div>
+  <p class="about-intro" data-i18n="about.intro">
+    I’m Efrem, a full-stack developer specializing in .NET and modern web architecture.
+    I design and build structured, scalable web applications from database to interface.
+    With a background in ASP.NET Core, Entity Framework, and modern frontend technologies,
+    I focus on clean architecture, performance, and user experience.
+  </p>
 
-  <h3 class="section-title">core competencies</h3>
+  <h3 class="about-services-title" data-i18n="about.services.title">What I Do</h3>
 
-  <div class="services-grid" role="list">
-
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
+  <div class="about-services-grid" role="list">
+    <article class="about-service-card" role="listitem">
+      <span class="about-service-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm0 13h16"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+          <path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm0 13h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </span>
-      <div>
-        <h4>Full-Stack Development</h4>
-        <p>
-          End-to-end application development using ASP.NET Core, Entity Framework, and modern frontend standards.
-        </p>
-      </div>
-    </div>
+      <h4 data-i18n="about.card.fullstack.title">Full-Stack Development</h4>
+      <p data-i18n="about.card.fullstack.desc">End-to-end application development using ASP.NET Core, Entity Framework, and modern frontend standards.</p>
+    </article>
 
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
+    <article class="about-service-card" role="listitem">
+      <span class="about-service-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M4 14c4-1 6-4 7-8 3 2 5 5 7 8-3 1-6 2-7 5-1-3-3-4-7-5Z"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+          <path d="M4 14c4-1 6-4 7-8 3 2 5 5 7 8-3 1-6 2-7 5-1-3-3-4-7-5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </span>
-      <div>
-        <h4>Frontend Engineering</h4>
-        <p>
-          Responsive, accessible interfaces built with clean architecture, modern CSS, and structured JavaScript.
-        </p>
-      </div>
-    </div>
+      <h4 data-i18n="about.card.frontend.title">Frontend Engineering</h4>
+      <p data-i18n="about.card.frontend.desc">Responsive, accessible interfaces built with clean architecture, modern CSS, and structured JavaScript.</p>
+    </article>
 
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
+    <article class="about-service-card" role="listitem">
+      <span class="about-service-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M6 8h12l2 4-2 4H6l-2-4 2-4Zm2-3h8"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+          <path d="M6 8h12l2 4-2 4H6l-2-4 2-4Zm2-3h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </span>
-      <div>
-        <h4>Database Architecture</h4>
-        <p>
-          Relational schema design, migrations, and API-ready data modeling with performance in mind.
-        </p>
-      </div>
-    </div>
+      <h4 data-i18n="about.card.database.title">Database Architecture</h4>
+      <p data-i18n="about.card.database.desc">Relational schema design, migrations, and API-ready data modeling with performance in mind.</p>
+    </article>
 
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
+    <article class="about-service-card" role="listitem">
+      <span class="about-service-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M12 3 5 6v6c0 4.5 3 8.3 7 9 4-0.7 7-4.5 7-9V6l-7-3Z"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+          <path d="M12 3 5 6v6c0 4.5 3 8.3 7 9 4-0.7 7-4.5 7-9V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </span>
-      <div>
-        <h4>Application Security</h4>
-        <p>
-          Secure authentication flows, role-based authorization, and privacy-conscious system design.
-        </p>
-      </div>
-    </div>
-
+      <h4 data-i18n="about.card.security.title">Application Security</h4>
+      <p data-i18n="about.card.security.desc">Secure authentication flows, role-based authorization, and privacy-conscious system design.</p>
+    </article>
   </div>
+</section>
 
         </article>
 
         <article class="panel" id="projects" data-index="1">
-  <h2>projects</h2>
-  <p class="work-intro">Selected builds highlighting product depth and polish.</p>
-  <div class="section-divider" role="presentation"></div>
-  <h3 class="section-title">featured work</h3>
-  <div class="services-grid" role="list">
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M4 6h16v12H4zM8 10h8M8 14h5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Portfolio Suite</h4>
-        <p>Modern portfolio system with content-driven sections.</p>
+          <h2 data-i18n="projects.title">Projects</h2>
+<p class="projects-subtitle" data-i18n="projects.subtitle">Recent Projects</p>
+<div class="about-underline" role="presentation"></div>
+
+<div class="portfolio-list" role="list">
+  <article class="portfolio-card" role="listitem">
+    <div class="portfolio-card-media">
+      <button type="button" class="portfolio-media-trigger" aria-label="Expand project image">
+        <img src="assets/projects/vibemix.png" alt="VibeMix application interface preview" data-i18n-alt="projects.image.vibemix.alt">
+      </button>
+    </div>
+    <div class="portfolio-card-content">
+      <span class="portfolio-kicker" data-i18n="projects.card.vibemix.label">Featured project</span>
+      <h3>VibeMix</h3>
+      <p data-i18n="projects.card.vibemix.desc">
+        Mood-based playlist generator designed to create personalized music experiences using modern web technologies.
+      </p>
+      <div class="portfolio-tags">
+        <span>Angular</span>
+        <span>TypeScript</span>
+        <span>Supabase</span>
+        <span>Spotify API</span>
+      </div>
+      <div class="portfolio-actions">
+        <a class="portfolio-btn" href="#" target="_blank" rel="noopener" data-i18n="projects.links.github">GitHub</a>
+        <a class="portfolio-btn portfolio-btn-primary" href="https://vibemix.app/" target="_blank" rel="noopener" aria-label="Open vibemix.app">Live App ↗</a>
       </div>
     </div>
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M5 12h14M12 5l7 7-7 7"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Product Onboarding</h4>
-        <p>Flow redesign that improved activation and retention.</p>
+  </article>
+
+  <article class="portfolio-card" role="listitem">
+    <div class="portfolio-card-media">
+      <button type="button" class="portfolio-media-trigger" aria-label="Expand project image">
+        <img src="assets/projects/nest.png" alt="Nest project interface preview" data-i18n-alt="projects.image.nest.alt">
+      </button>
+    </div>
+    <div class="portfolio-card-content">
+      <span class="portfolio-kicker" data-i18n="projects.card.nest.label">Product concept</span>
+      <h3>Nest</h3>
+      <p data-i18n="projects.card.nest.desc">
+        Concept platform focused on simplifying everyday digital experiences through clean design and structured systems.
+      </p>
+      <div class="portfolio-tags">
+        <span>JavaScript</span>
+        <span>Node</span>
+        <span>REST API</span>
+      </div>
+      <div class="portfolio-actions">
+        <a class="portfolio-btn" href="#" target="_blank" rel="noopener" data-i18n="projects.links.github">GitHub</a>
+        <a class="portfolio-btn portfolio-btn-primary" href="https://your-nest.vercel.app/" target="_blank" rel="noopener" aria-label="Open your-nest.vercel.app">Live App ↗</a>
       </div>
     </div>
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M4 19h16M6 16v-4M12 16V8M18 16v-6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Analytics Hub</h4>
-        <p>Data dashboards with custom visual reporting.</p>
+  </article>
+
+  <article class="portfolio-card" role="listitem">
+    <div class="portfolio-card-media">
+      <button type="button" class="portfolio-media-trigger" aria-label="Expand project image">
+        <img src="assets/projects/booking-system.jpg" alt="Booking system project preview" data-i18n-alt="projects.image.booking.alt">
+      </button>
+    </div>
+    <div class="portfolio-card-content">
+      <span class="portfolio-kicker" data-i18n="projects.card.booking.label">System build</span>
+      <h3>Booking System</h3>
+      <p data-i18n="projects.card.booking.desc">
+        Full-stack booking platform with authentication, role-based access control, and structured scheduling workflows.
+      </p>
+      <div class="portfolio-tags">
+        <span>.NET</span>
+        <span>ASP.NET Core</span>
+        <span>Entity Framework</span>
+        <span>SQL</span>
+      </div>
+      <div class="portfolio-actions">
+        <a class="portfolio-btn" href="#" target="_blank" rel="noopener" data-i18n="projects.links.github">GitHub</a>
+        <a class="portfolio-btn portfolio-btn-primary" href="#" target="_blank" rel="noopener" data-i18n="projects.links.demo">Live demo</a>
       </div>
     </div>
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M6 12a6 6 0 1 1 6 6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M9 15v4h4"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Growth Experiments</h4>
-        <p>A/B testing framework and feature flag toolkit.</p>
+  </article>
+
+  <article class="portfolio-card" role="listitem">
+    <div class="portfolio-card-media">
+      <button type="button" class="portfolio-media-trigger" aria-label="Expand project image">
+        <img src="assets/projects/web-portfolio.png" alt="Web portfolio interface preview" data-i18n-alt="projects.image.portfolio.alt">
+      </button>
+    </div>
+    <div class="portfolio-card-content">
+      <span class="portfolio-kicker" data-i18n="projects.card.portfolio.label">Portfolio</span>
+      <h3>Web Portfolio</h3>
+      <p data-i18n="projects.card.portfolio.desc">
+        Modern developer portfolio built with Eleventy, featuring multilingual support and animated panel navigation.
+      </p>
+      <div class="portfolio-tags">
+        <span>Eleventy</span>
+        <span>Nunjucks</span>
+        <span>JavaScript</span>
+        <span>CSS</span>
+      </div>
+      <div class="portfolio-actions">
+        <a class="portfolio-btn" href="#" target="_blank" rel="noopener" data-i18n="projects.links.github">GitHub</a>
+        <a class="portfolio-btn portfolio-btn-primary" href="#" target="_blank" rel="noopener" data-i18n="projects.links.demo">Live demo</a>
       </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>
+        </article>
 
         <article class="panel" id="experience" data-index="2">
-  <h2>work experience</h2>
-  <p class="work-intro">Highlights from my professional roles and responsibilities.</p>
+            <h2 data-i18n="experience.title">Work Experience</h2>
+  <p class="work-intro" data-i18n="experience.intro">Highlights from my professional roles and responsibilities.</p>
+  <div class="about-underline" role="presentation"></div>
   <div class="section-divider" role="presentation"></div>
-  <div class="services-grid" role="list">
+  <div class="experience-timeline" role="list">
     
-    <details class="repo-card work-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Projektledare
-        </span>
-        <span class="repo-stack">Robertsfors Kommun, Robertsfors · aug 2022 - sep 2023</span>
-      </summary>
-      
-      <ul class="detail-list">
-        
-        <li>Jobbade med utrikes födda nyanlända och informerade om bl.a. arbetsmarknadskunskap och SO.</li>
-        
-        <li>Anordnade studiebesök och praktikplatser till deltagare. Uppföljning med arbetsgivare om praktikantens utveckling.</li>
-        
-      </ul>
-      
-    </details>
     
-    <details class="repo-card work-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Projektledare
-        </span>
-        <span class="repo-stack">Robertsfors Kommun, Robertsfors · mar 2018 - dec 2019</span>
-      </summary>
-      
-      <ul class="detail-list">
+    <article class="experience-item" role="listitem">
+      <div class="experience-content">
+        <h3 data-i18n="experience.entries.0.title">Projektledare</h3>
+        <p class="experience-company">
+          <span data-i18n="experience.entries.0.company">Robertsfors Kommun</span> · <span data-i18n="experience.entries.0.location">Robertsfors, Sverige</span>
+        </p>
+        <p class="experience-period" data-i18n="experience.entries.0.period">Aug 2022 – Sep 2023</p>
         
-        <li>Assistera och förberedda arbetssökandena att hitta jobb (t.ex. CV, personligt brev).</li>
+        <ul class="experience-description-list">
+          
+          <li data-i18n="experience.entries.0.details.0">Stöttade nyanlända i etablering genom arbetsmarknadsintroduktion och samhällsorientering.</li>
+          
+          <li data-i18n="experience.entries.0.details.1">Planerade och organiserade praktikplatser samt studiebesök.</li>
+          
+          <li data-i18n="experience.entries.0.details.2">Följde upp deltagarnas utveckling i samarbete med arbetsgivare.</li>
+          
+          <li data-i18n="experience.entries.0.details.3">Arbetade strukturerat med uppföljning, koordinering och kommunikation mellan flera parter.</li>
+          
+        </ul>
         
-        <li>Hitta praktikplatser och ordna studiebesök hos arbetsgivare.</li>
-        
-        <li>Språkstöd för arbets-givare/tagare vid informationsträffar.</li>
-        
-      </ul>
-      
-    </details>
+      </div>
+    </article>
     
-    <details class="repo-card work-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Assistent
-        </span>
-        <span class="repo-stack">Arbertsförmedlingen, Robertsfors · jun 2017 - mar 2018</span>
-      </summary>
-      
-      <ul class="detail-list">
-        
-        <li>Allmänt kontorsarbete, sprida ny information om regler och förändringar till arbetssökandena i etableringsprogram.</li>
-        
-        <li>Språkstöd för arbetsförmedlarna vid personliga möten och inskrivningar.</li>
-        
-        <li>Uppföljningar med arbetsgivare och arbetstagare efter anställningar eller praktik.</li>
-        
-      </ul>
-      
-    </details>
     
-    <details class="repo-card work-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Project Incharge
-        </span>
-        <span class="repo-stack">Al Marai company (IPNC avdelning), Jidda, Saudiarabien · sep 2012 - apr 2014</span>
-      </summary>
-      
-      <ul class="detail-list">
+    <article class="experience-item" role="listitem">
+      <div class="experience-content">
+        <h3 data-i18n="experience.entries.1.title">Projektledare</h3>
+        <p class="experience-company">
+          <span data-i18n="experience.entries.1.company">Robertsfors Kommun</span> · <span data-i18n="experience.entries.1.location">Robertsfors, Sverige</span>
+        </p>
+        <p class="experience-period" data-i18n="experience.entries.1.period">Mar 2018 – Dec 2019</p>
         
-        <li>Projektledning av ett nytt lanserad projekt i samarbete med Mead Johnson i USA.</li>
+        <ul class="experience-description-list">
+          
+          <li data-i18n="experience.entries.1.details.0">Stöttade arbetssökande i jobbsökning (CV, personligt brev och intervjuförberedelse).</li>
+          
+          <li data-i18n="experience.entries.1.details.1">Identifierade och etablerade praktikmöjligheter i samarbete med arbetsgivare.</li>
+          
+          <li data-i18n="experience.entries.1.details.2">Organiserade studiebesök och arbetsmarknadsaktiviteter.</li>
+          
+          <li data-i18n="experience.entries.1.details.3">Agerade språkstöd och länk mellan arbetssökande och arbetsgivare.</li>
+          
+        </ul>
         
-        <li>Samordning och ledarskap av fem läkemedels representanter samt 66 säljledare i nordvästra regionen.</li>
-        
-        <li>Övervaka lager tillgänglighet, försäljning och leverans till sjukhus, apotek och supermarket.</li>
-        
-        <li>Regelbund besök och kontroll av yttre depåer i regionen samt befintliga kunder för att säkerställa kund nöjdhet och produkt tillgänglighet.</li>
-        
-      </ul>
-      
-    </details>
+      </div>
+    </article>
     
-    <details class="repo-card work-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Försäljningshandledare och TF försäljningschef
-        </span>
-        <span class="repo-stack">Al Marai company (mejeri avdelning), Jidda, Saudiarabien · jan 2008 - sep 2012</span>
-      </summary>
-      
-      <ul class="detail-list">
-        
-        <li>Övervaka och leda ett säljteam av 22 försäljare och assistenter.</li>
-        
-        <li>Uppnå företagets uppsatta mål, utbilda personal, upprätthålla och utveckla distributions plan.</li>
-        
-        <li>Kontrollera budget och säkerställa marknadens behov genom ett besöka kunderna regelbundet.</li>
-        
-        <li>Samordna och leda ett säljteam av 5 försäljningsansvariga och övervaka de dagliga försäljningsutvecklingarna.</li>
-        
-        <li>Uppföljning av dagliga och veckovisa mål för att stödja teamet att uppnå önskade mål.</li>
-        
-      </ul>
-      
-    </details>
     
-    <details class="repo-card work-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Key Account Manager/säljare
-        </span>
-        <span class="repo-stack">Al Marai company (mejeri avdelning), Jidda, Saudiarabien · maj 2005 - dec 2007</span>
-      </summary>
-      
-      <ul class="detail-list">
+    <article class="experience-item" role="listitem">
+      <div class="experience-content">
+        <h3 data-i18n="experience.entries.2.title">Assistent</h3>
+        <p class="experience-company">
+          <span data-i18n="experience.entries.2.company">Arbetsförmedlingen</span> · <span data-i18n="experience.entries.2.location">Robertsfors, Sverige</span>
+        </p>
+        <p class="experience-period" data-i18n="experience.entries.2.period">Jun 2017 – Mar 2018</p>
         
-        <li>Göra prognos och beställa produkter i förenligt efterfrågan på marknaden efter klimatförhållande.</li>
+        <ul class="experience-description-list">
+          
+          <li data-i18n="experience.entries.2.details.0">Administrativt stöd inom etableringsprogrammet och informationshantering.</li>
+          
+          <li data-i18n="experience.entries.2.details.1">Språkstöd vid möten, inskrivningar och kommunikation med deltagare.</li>
+          
+          <li data-i18n="experience.entries.2.details.2">Uppföljning av praktik- och anställningsprocesser tillsammans med arbetsgivare.</li>
+          
+          <li data-i18n="experience.entries.2.details.3">Bidrog till strukturerade arbetsflöden och effektiv informationsspridning.</li>
+          
+        </ul>
         
-        <li>Distribution och leverans av mejeri produkter enligt marknadsbehov.</li>
-        
-        <li>Insamling av betalningarna och undersökning av kund nöjdhet enligt företagspolicy.</li>
-        
-        <li>Kontroll av produkters tillgänglighet samt säkerställa att företagets kylkedjehantering och kvalitetspolicy följs.</li>
-        
-      </ul>
-      
-    </details>
+      </div>
+    </article>
     
-    <details class="repo-card work-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Marknadsföring och gruppledare
-        </span>
-        <span class="repo-stack">Salim Mohammed Bakhashwen &amp; sons AB (SEB &amp; TEFAL grupp), Jidda, Saudiarabien · mar 2000 - dec 2004</span>
-      </summary>
-      
-      <ul class="detail-list">
+    
+    <article class="experience-item" role="listitem">
+      <div class="experience-content">
+        <h3 data-i18n="experience.entries.3.title">Project Incharge</h3>
+        <p class="experience-company">
+          <span data-i18n="experience.entries.3.company">Almarai Company (IPNC Division)</span> · <span data-i18n="experience.entries.3.location">Jeddah, Saudiarabien</span>
+        </p>
+        <p class="experience-period" data-i18n="experience.entries.3.period">Sep 2012 – Apr 2014</p>
         
-        <li>Arrangera marknadsföring och insamling av beställningar och betalningar från centrala butiker.</li>
+        <ul class="experience-description-list">
+          
+          <li data-i18n="experience.entries.3.details.0">Ledde lansering av nytt projekt i samarbete med Mead Johnson (USA).</li>
+          
+          <li data-i18n="experience.entries.3.details.1">Samordnade och ledde team bestående av representanter och säljledare i regionen.</li>
+          
+          <li data-i18n="experience.entries.3.details.2">Övervakade lager, försäljning och distribution till sjukhus och apotek.</li>
+          
+          <li data-i18n="experience.entries.3.details.3">Säkerställde effektiv koordinering och måluppfyllelse i projektets olika faser.</li>
+          
+        </ul>
         
-        <li>Samordna leverans av köksredskap till företagets egna butiker samt externa kunder.</li>
+      </div>
+    </article>
+    
+    
+    <article class="experience-item" role="listitem">
+      <div class="experience-content">
+        <h3 data-i18n="experience.entries.4.title">Sales Supervisor / Acting Sales Manager</h3>
+        <p class="experience-company">
+          <span data-i18n="experience.entries.4.company">Almarai Company (Dairy Division)</span> · <span data-i18n="experience.entries.4.location">Jeddah, Saudiarabien</span>
+        </p>
+        <p class="experience-period" data-i18n="experience.entries.4.period">Jan 2008 – Sep 2012</p>
         
-        <li>Säkerställa till att produkterna visades på ett attraktivt och säljbart sätt i butiker.</li>
+        <ul class="experience-description-list">
+          
+          <li data-i18n="experience.entries.4.details.0">Ledde och utvecklade ett säljteam om 22 personer.</li>
+          
+          <li data-i18n="experience.entries.4.details.1">Ansvarade för budget, försäljningsmål och distributionsplanering.</li>
+          
+          <li data-i18n="experience.entries.4.details.2">Följde upp dagliga och veckovisa prestationer för att säkerställa måluppfyllelse.</li>
+          
+          <li data-i18n="experience.entries.4.details.3">Arbetade med ledarskap, coaching och optimering av teamets resultat.</li>
+          
+        </ul>
         
-      </ul>
-      
-    </details>
+      </div>
+    </article>
+    
+    
+    <article class="experience-item" role="listitem">
+      <div class="experience-content">
+        <h3 data-i18n="experience.entries.5.title">Key Account Manager</h3>
+        <p class="experience-company">
+          <span data-i18n="experience.entries.5.company">Almarai Company (Dairy Division)</span> · <span data-i18n="experience.entries.5.location">Jeddah, Saudiarabien</span>
+        </p>
+        <p class="experience-period" data-i18n="experience.entries.5.period">May 2005 – Dec 2007</p>
+        
+        <ul class="experience-description-list">
+          
+          <li data-i18n="experience.entries.5.details.0">Ansvarade för nyckelkunder och långsiktiga affärsrelationer.</li>
+          
+          <li data-i18n="experience.entries.5.details.1">Prognostiserade efterfrågan och optimerade produktdistribution.</li>
+          
+          <li data-i18n="experience.entries.5.details.2">Säkerställde betalningsflöden och kundnöjdhet enligt företagets riktlinjer.</li>
+          
+          <li data-i18n="experience.entries.5.details.3">Arbetade med datadriven uppföljning av försäljning och lager.</li>
+          
+        </ul>
+        
+      </div>
+    </article>
+    
+    
+    <article class="experience-item" role="listitem">
+      <div class="experience-content">
+        <h3 data-i18n="experience.entries.6.title">Marketing &amp; Team Leader</h3>
+        <p class="experience-company">
+          <span data-i18n="experience.entries.6.company">Salim Mohammed Bakhashwen &amp; Sons (SEB &amp; Tefal Group)</span> · <span data-i18n="experience.entries.6.location">Jeddah, Saudiarabien</span>
+        </p>
+        <p class="experience-period" data-i18n="experience.entries.6.period">Mar 2000 – Dec 2004</p>
+        
+        <ul class="experience-description-list">
+          
+          <li data-i18n="experience.entries.6.details.0">Planerade och genomförde marknadsaktiviteter samt kampanjer.</li>
+          
+          <li data-i18n="experience.entries.6.details.1">Koordinerade orderhantering och leveranser till butiker och kunder.</li>
+          
+          <li data-i18n="experience.entries.6.details.2">Säkerställde attraktiv produktpresentation i butik för ökad försäljning.</li>
+          
+          <li data-i18n="experience.entries.6.details.3">Ledde team och bidrog till effektiv daglig drift och kundupplevelse.</li>
+          
+        </ul>
+        
+      </div>
+    </article>
     
   </div>
-</article>
+
+        </article>
 
         <article class="panel" id="journey" data-index="3">
-  <h2>journey</h2>
-  <p class="work-intro">Selected GitHub repositories and recent contributions.</p>
-  <div class="section-divider" role="presentation"></div>
-  <div class="services-grid journey-list" role="list" id="journey-repos">
+          <section class="journey-section">
+  <h2 data-i18n="journey.title">GitHub</h2>
+  <p class="journey-subtitle" data-i18n="journey.intro">Open Source Projects</p>
+  <div class="about-underline" role="presentation"></div>
+
+  <div class="journey-feed" role="list" id="journey-repos">
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          NEST
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>NEST</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          NEST – Your mini digital assistant for documenting all your Notes, Entertainment, Stories &amp; Thoughts, All in one place.. 
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            TypeScript · SCSS · HTML · JavaScript
+            
+              <span>TypeScript</span>
+            
+              <span>SCSS</span>
+            
+              <span>HTML</span>
+            
+              <span>JavaScript</span>
+            
           
-        </span>
-      </summary>
-      <p>NEST – Your mini digital assistant for documenting all your Notes, Entertainment, Stories &amp; Thoughts, All in one place.. </p>
-      <a href="https://github.com/EfremGhebre/NEST" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/NEST" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Object-Finder
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Object-Finder</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 1</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          An application for analyzing images using Azure Computer Vision
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            HTML · C# · CSS · JavaScript
+            
+              <span>HTML</span>
+            
+              <span>C#</span>
+            
+              <span>CSS</span>
+            
+              <span>JavaScript</span>
+            
           
-        </span>
-      </summary>
-      <p>An application for analyzing images using Azure Computer Vision</p>
-      <a href="https://github.com/EfremGhebre/Object-Finder" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/Object-Finder" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Q-A-Services
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Q-A-Services</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 1</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A console application that detects language and answers AI related questions
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A console application that detects language and answers AI related questions</p>
-      <a href="https://github.com/EfremGhebre/Q-A-Services" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/Q-A-Services" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          VarmDrinkStation
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>VarmDrinkStation</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A simple console application to excercise Design patterns
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A simple console application to excercise Design patterns</p>
-      <a href="https://github.com/EfremGhebre/VarmDrinkStation" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/VarmDrinkStation" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          FarmAnimals
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>FarmAnimals</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A simple console application that demonstrates 3 different design patterns 
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A simple console application that demonstrates 3 different design patterns </p>
-      <a href="https://github.com/EfremGhebre/FarmAnimals" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/FarmAnimals" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Labb-4-My-Library
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Labb-4-My-Library</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 1</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A basic Web application for a fictious library for managing books and customers
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C# · HTML · CSS · JavaScript
+            
+              <span>C#</span>
+            
+              <span>HTML</span>
+            
+              <span>CSS</span>
+            
+              <span>JavaScript</span>
+            
           
-        </span>
-      </summary>
-      <p>A basic Web application for a fictious library for managing books and customers</p>
-      <a href="https://github.com/EfremGhebre/Labb-4-My-Library" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/Labb-4-My-Library" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Labb-3-Web-API
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Labb-3-Web-API</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 1</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A Web API that manages persons and interests associated with respective links to their interests
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A Web API that manages persons and interests associated with respective links to their interests</p>
-      <a href="https://github.com/EfremGhebre/Labb-3-Web-API" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/Labb-3-Web-API" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          CV
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>CV</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          My digital CV website built using JavaScript, HTML &amp; CSS
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            JavaScript · CSS · HTML
+            
+              <span>JavaScript</span>
+            
+              <span>CSS</span>
+            
+              <span>HTML</span>
+            
           
-        </span>
-      </summary>
-      <p>My digital CV website built using JavaScript, HTML &amp; CSS</p>
-      <a href="https://github.com/EfremGhebre/CV" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/CV" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          ASP.Net-labb-2-School-App
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>ASP.Net-labb-2-School-App</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 2</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A basic Web application for a fictious school that enables managing classes, courses, teachers and students
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C# · HTML · CSS · JavaScript
+            
+              <span>C#</span>
+            
+              <span>HTML</span>
+            
+              <span>CSS</span>
+            
+              <span>JavaScript</span>
+            
           
-        </span>
-      </summary>
-      <p>A basic Web application for a fictious school that enables managing classes, courses, teachers and students</p>
-      <a href="https://github.com/EfremGhebre/ASP.Net-labb-2-School-App" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/ASP.Net-labb-2-School-App" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          IT_Norr
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>IT_Norr</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A Web application built for a fictious company that enables managing staff and leave requests
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C# · HTML · CSS · JavaScript
+            
+              <span>C#</span>
+            
+              <span>HTML</span>
+            
+              <span>CSS</span>
+            
+              <span>JavaScript</span>
+            
           
-        </span>
-      </summary>
-      <p>A Web application built for a fictious company that enables managing staff and leave requests</p>
-      <a href="https://github.com/EfremGhebre/IT_Norr" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/IT_Norr" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          ZEEYA
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>ZEEYA</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          Group project built with JavaScript, HTML &amp; CSS that allows personal administrate their projects
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            JavaScript · HTML · SCSS
+            
+              <span>JavaScript</span>
+            
+              <span>HTML</span>
+            
+              <span>SCSS</span>
+            
           
-        </span>
-      </summary>
-      <p>Group project built with JavaScript, HTML &amp; CSS that allows personal administrate their projects</p>
-      <a href="https://github.com/EfremGhebre/ZEEYA" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/ZEEYA" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          myportfoljo
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>myportfoljo</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 1</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          My first digital CV built by using HTML &amp; CSS only 
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            HTML · CSS
+            
+              <span>HTML</span>
+            
+              <span>CSS</span>
+            
           
-        </span>
-      </summary>
-      <p>My first digital CV built by using HTML &amp; CSS only </p>
-      <a href="https://github.com/EfremGhebre/myportfoljo" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/myportfoljo" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          DB-individual-project
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>DB-individual-project</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 1</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A console application built with C# and SQL that enables school personal administrate students and employees 
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A console application built with C# and SQL that enables school personal administrate students and employees </p>
-      <a href="https://github.com/EfremGhebre/DB-individual-project" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/DB-individual-project" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          testgrupp
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>testgrupp</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          Test repo to practice adding updates to projects in GitHub
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            HTML
+            
+              <span>HTML</span>
+            
           
-        </span>
-      </summary>
-      <p>Test repo to practice adding updates to projects in GitHub</p>
-      <a href="https://github.com/EfremGhebre/testgrupp" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/testgrupp" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          testgit
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>testgit</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          Testing GitHub
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            HTML
+            
+              <span>HTML</span>
+            
           
-        </span>
-      </summary>
-      <p>Testing GitHub</p>
-      <a href="https://github.com/EfremGhebre/testgit" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/testgit" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          EfremGhebre
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>EfremGhebre</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          Config files for my GitHub profile.
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            Tech stack TBD
+            <span data-i18n="journey.techStackTbd">Tech stack TBD</span>
           
-        </span>
-      </summary>
-      <p>Config files for my GitHub profile.</p>
-      <a href="https://github.com/EfremGhebre/EfremGhebre" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/EfremGhebre" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Labb8-OOP-Generic-Collections
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Labb8-OOP-Generic-Collections</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 1</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A school assignment in OOP generic collection using C#
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A school assignment in OOP generic collection using C#</p>
-      <a href="https://github.com/EfremGhebre/Labb8-OOP-Generic-Collections" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/Labb8-OOP-Generic-Collections" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Area-Calculator
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Area-Calculator</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A console application that calculates areas for different geometric figures 
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A console application that calculates areas for different geometric figures </p>
-      <a href="https://github.com/EfremGhebre/Area-Calculator" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/Area-Calculator" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          Labb6-Arv
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Labb6-Arv</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A console application built with C# for a Zoo that displays animals&#39; information, main focus was practicing &#39;Inheritance&#39; 
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A console application built with C# for a Zoo that displays animals&#39; information, main focus was practicing &#39;Inheritance&#39; </p>
-      <a href="https://github.com/EfremGhebre/Labb6-Arv" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/Labb6-Arv" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          GrundernaOOP
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>GrundernaOOP</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 1</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A console application that takes input from user and calculates areas and perimeters for squares, triangles and circles
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A console application that takes input from user and calculates areas and perimeters for squares, triangles and circles</p>
-      <a href="https://github.com/EfremGhebre/GrundernaOOP" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/GrundernaOOP" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          NumberzGame
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>NumberzGame</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A console application that allows users guess the right number
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A console application that allows users guess the right number</p>
-      <a href="https://github.com/EfremGhebre/NumberzGame" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/NumberzGame" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          GitHubDemo
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>GitHubDemo</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          GitHub test
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>GitHub test</p>
-      <a href="https://github.com/EfremGhebre/GitHubDemo" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/GitHubDemo" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          ChessBoard
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>ChessBoard</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 0</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          A console application that takes numeric input from user and builds a chess board with squares equivalent to the input 
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>A console application that takes numeric input from user and builds a chess board with squares equivalent to the input </p>
-      <a href="https://github.com/EfremGhebre/ChessBoard" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/ChessBoard" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
-    <details class="repo-card" role="listitem">
-      <summary>
-        <span class="repo-title">
-          <span class="repo-arrow" aria-hidden="true">▸</span>
-          MyFirstProgram
-        </span>
-        <span class="repo-stack">
+    <article class="journey-repo-card" role="listitem">
+      <div class="journey-repo-head">
+        <div class="journey-repo-name-wrap">
+          <span class="journey-repo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3.5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 7h4m-2-2v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>MyFirstProgram</h3>
+        </div>
+        <div class="journey-repo-stats">
+          <span title="Stars" data-i18n-title="journey.stars.title">☆ 1</span>
+          <span title="Forks" data-i18n-title="journey.forks.title">⑂ 0</span>
+        </div>
+      </div>
+
+      <p class="journey-repo-desc">
+        
+          My first C# console application, practiced loops and variables
+        
+      </p>
+
+      <div class="journey-repo-footer">
+        <div class="journey-repo-tags">
           
-            C#
+            
+              <span>C#</span>
+            
           
-        </span>
-      </summary>
-      <p>My first C# console application, practiced loops and variables</p>
-      <a href="https://github.com/EfremGhebre/MyFirstProgram" target="_blank" rel="noopener">View on GitHub</a>
-    </details>
+        </div>
+        <a class="journey-repo-link" href="https://github.com/EfremGhebre/MyFirstProgram" target="_blank" rel="noopener" data-i18n="journey.viewGithub">View on GitHub</a>
+      </div>
+    </article>
     
   </div>
-</article>
+</section>
+
+        </article>
 
         <article class="panel" id="education" data-index="4">
-  <h2>education &amp; skills</h2>
-  <p class="work-intro">Academic background and core technical strengths.</p>
-  <div class="section-divider" role="presentation"></div>
-  <h3 class="section-title">skills</h3>
-  <div class="services-grid" role="list">
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M4 5h16v14H4zM8 9h8M8 13h6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>HTML / CSS</h4>
-        <p>Semantic structure, layout systems, and responsive UI.</p>
+          <section class="skills-dashboard">
+  <h2 data-i18n="education.title">Education &amp; Skills</h2>
+  <div class="about-underline" role="presentation"></div>
+  <p class="work-intro" data-i18n="education.intro">Academic background and core technical strengths.</p>
+  <h3 class="section-title education-focus-title" data-i18n="education.focus.title">Core Focus</h3>
+  <p class="work-intro education-focus-copy" data-i18n="education.focus.copy">
+   Full-stack development with .NET and modern frontend technologies,
+focused on building scalable and user-friendly applications.
+  </p>
+
+  <div class="skills-dashboard-grid">
+    <article class="skills-panel">
+      <h3 class="skills-panel-heading">
+        <span class="skills-panel-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="skills-panel-title" data-i18n="education.section.skills">Skills</span>
+      </h3>
+      <div class="skills-chip-wrap">
+        <span class="skills-chip" data-i18n="education.skills.item1">Frontend Architecture</span>
+        <span class="skills-chip" data-i18n="education.skills.item2">Modern JavaScript (ES6+)</span>
+        <span class="skills-chip" data-i18n="education.skills.item3">Responsive &amp; Accessible UI</span>
+        <span class="skills-chip" data-i18n="education.skills.item4">Performance Optimization</span>
       </div>
-    </div>
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M8 7h8l-1 10H9zM12 5v2"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>JavaScript</h4>
-        <p>Interactive experiences and modern ES tooling.</p>
+    </article>
+
+    <article class="skills-panel language-skills-panel">
+      <h3 class="skills-panel-heading">
+        <span class="skills-panel-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3.5A8.5 8.5 0 1 0 20.5 12 8.5 8.5 0 0 0 12 3.5Zm0 0c2.3 2.4 3.4 5.2 3.4 8.5S14.3 18.1 12 20.5M12 3.5c-2.3 2.4-3.4 5.2-3.4 8.5s1.1 6.1 3.4 8.5M4.7 9.4h14.6M4.7 14.6h14.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="skills-panel-title" data-i18n="education.section.languages">Language Skills</span>
+      </h3>
+      <div class="skills-chip-wrap">
+        <span class="skills-chip" data-i18n="education.languages.item1">English</span>
+        <span class="skills-chip" data-i18n="education.languages.item2">Swedish</span>
+        <span class="skills-chip" data-i18n="education.languages.item3">Tigrinja</span>
+        <span class="skills-chip" data-i18n="education.languages.item4">Arabic</span>
       </div>
-    </div>
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M6 12h12M6 8h12M6 16h8"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Design Systems</h4>
-        <p>Reusable components with accessible patterns.</p>
+    </article>
+
+    <article class="skills-panel">
+      <h3 class="skills-panel-heading">
+        <span class="skills-panel-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 8h14M5 12h14M5 16h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            <circle cx="8" cy="8" r="1.2" fill="currentColor" />
+            <circle cx="16" cy="12" r="1.2" fill="currentColor" />
+            <circle cx="11" cy="16" r="1.2" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="skills-panel-title" data-i18n="education.section.technical">Technical Skills</span>
+      </h3>
+      <div class="skills-tech-groups">
+        <section class="skills-tech-group">
+          <h4 class="skills-tech-group-title" data-i18n="education.tech.backend">Backend</h4>
+          <div class="skills-chip-wrap">
+            <span class="skills-chip" data-i18n="education.tech.backend.item1">C# / .NET</span>
+            <span class="skills-chip" data-i18n="education.tech.backend.item2">ASP.NET Core MVC</span>
+            <span class="skills-chip" data-i18n="education.tech.backend.item3">Entity Framework Core</span>
+            <span class="skills-chip" data-i18n="education.tech.backend.item4">ASP.NET Identity</span>
+            <span class="skills-chip" data-i18n="education.tech.backend.item5">REST API design</span>
+            <span class="skills-chip" data-i18n="education.tech.backend.item6">Role-based access control</span>
+          </div>
+        </section>
+
+        <section class="skills-tech-group">
+          <h4 class="skills-tech-group-title" data-i18n="education.tech.frontend">Frontend</h4>
+          <div class="skills-chip-wrap">
+            <span class="skills-chip" data-i18n="education.tech.frontend.item1">TypeScript</span>
+            <span class="skills-chip" data-i18n="education.tech.frontend.item2">Angular</span>
+            <span class="skills-chip" data-i18n="education.tech.frontend.item5">Component-based UI architecture</span>
+            <span class="skills-chip" data-i18n="education.tech.frontend.item6">Responsive design</span>
+          </div>
+        </section>
+
+        <section class="skills-tech-group">
+          <h4 class="skills-tech-group-title" data-i18n="education.tech.databases">Databases</h4>
+          <div class="skills-chip-wrap">
+            <span class="skills-chip" data-i18n="education.tech.databases.item1">SQL Server</span>
+            <span class="skills-chip" data-i18n="education.tech.databases.item2">PostgreSQL</span>
+            <span class="skills-chip" data-i18n="education.tech.databases.item3">SQLite</span>
+            <span class="skills-chip" data-i18n="education.tech.databases.item4">Schema design &amp; relational modeling</span>
+          </div>
+        </section>
+
+        <section class="skills-tech-group">
+          <h4 class="skills-tech-group-title" data-i18n="education.tech.tools">Tools &amp; Environment</h4>
+          <div class="skills-chip-wrap">
+            <span class="skills-chip" data-i18n="education.tech.tools.item1">Git / GitHub</span>
+            <span class="skills-chip" data-i18n="education.tech.tools.item2">Supabase</span>
+            <span class="skills-chip" data-i18n="education.tech.tools.item5">Vercel / Netlify (explored)</span>
+          </div>
+        </section>
       </div>
-    </div>
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M4 12h4l2 4 4-8 2 4h4"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Performance</h4>
-        <p>Rendering optimization and Lighthouse tuning.</p>
+    </article>
+
+    <article class="skills-panel">
+      <h3 class="skills-panel-heading">
+        <span class="skills-panel-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+            <path d="M7 11v4.5c0 .8 2.2 2 5 2s5-1.2 5-2V11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="skills-panel-title" data-i18n="education.section.education">Education</span>
+      </h3>
+      <div class="skills-list">
+        
+        
+        <div class="skills-list-item">
+          <div class="skills-row">
+            <strong data-i18n="education.entries.0.title">Systemutveckling .NET</strong>
+            <span data-i18n="education.entries.0.date">4 sep 2023 - 25 apr 2025</span>
+          </div>
+          <p data-i18n="education.entries.0.location">Distans</p>
+          <p data-i18n="education.entries.0.description">YH-program i Systemutveckling .NET med AI-inriktning (EduGrade). Fokus på backendutveckling, databaser och moderna webbapplikationer.</p>
+        </div>
+        
+        
+        <div class="skills-list-item">
+          <div class="skills-row">
+            <strong data-i18n="education.entries.1.title">Gymnasieexamen</strong>
+            <span data-i18n="education.entries.1.date">sep 1994 - jul 1998</span>
+          </div>
+          <p data-i18n="education.entries.1.location">St. Anna gymnasieskola, Asmara, Eritrea</p>
+          <p data-i18n="education.entries.1.description">Läst allmänna gymnasiestudier.</p>
+        </div>
+        
       </div>
-    </div>
+    </article>
+
+    <article class="skills-panel">
+      <h3 class="skills-panel-heading">
+        <span class="skills-panel-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <rect x="5" y="4.5" width="14" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.7" />
+            <path d="M9 9h6M9 13h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="skills-panel-title" data-i18n="education.section.courses">Courses</span>
+      </h3>
+      <div class="skills-list">
+        
+        
+        <div class="skills-list-item">
+          <div class="skills-row">
+            <strong data-i18n="education.courses.0.title">Programmering 1</strong>
+            <span data-i18n="education.courses.0.date">jan 2023 – juni 2023</span>
+          </div>
+          <p data-i18n="education.courses.0.location">Hermods, Distans</p>
+          <p data-i18n="education.courses.0.description">Grundläggande programmering i C# med fokus på problemlösning och logik.</p>
+        </div>
+        
+        
+        <div class="skills-list-item">
+          <div class="skills-row">
+            <strong data-i18n="education.courses.1.title">Datanätverk (kurser)</strong>
+            <span data-i18n="education.courses.1.date">aug 2020 – dec 2020</span>
+          </div>
+          <p data-i18n="education.courses.1.location">LTU, Skellefteå</p>
+          <p data-i18n="education.courses.1.description">Studier i nätverksteknik, inklusive matematik för nätverk samt digitala och analoga system.</p>
+        </div>
+        
+        
+        <div class="skills-list-item">
+          <div class="skills-row">
+            <strong data-i18n="education.courses.2.title">Förhandlingsteknik</strong>
+            <span data-i18n="education.courses.2.date">mar 2011</span>
+          </div>
+          <p data-i18n="education.courses.2.location">Riyadh, Saudiarabien</p>
+          <p data-i18n="education.courses.2.description">Workshops i förhandling, KPI-styrning och påverkande försäljning.</p>
+        </div>
+        
+        
+        <div class="skills-list-item">
+          <div class="skills-row">
+            <strong data-i18n="education.courses.3.title">Presentationsteknik</strong>
+            <span data-i18n="education.courses.3.date">apr 2009</span>
+          </div>
+          <p data-i18n="education.courses.3.location">Riyadh, Saudiarabien</p>
+          <p data-i18n="education.courses.3.description">Workshop i presentation och kommunikationsteknik.</p>
+        </div>
+        
+        
+        <div class="skills-list-item">
+          <div class="skills-row">
+            <strong data-i18n="education.courses.4.title">Ledarskap &amp; Säljutveckling</strong>
+            <span data-i18n="education.courses.4.date">2009</span>
+          </div>
+          <p data-i18n="education.courses.4.location">Riyadh, Saudiarabien</p>
+          <p data-i18n="education.courses.4.description">Avancerad utbildning för säljledare med fokus på teamledning och prestation.</p>
+        </div>
+        
+      </div>
+    </article>
   </div>
-  <div class="section-divider" role="presentation"></div>
-  <h3 class="section-title">technical skills</h3>
-  <div class="services-grid" role="list">
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M7 7h10a2 2 0 0 1 2 2v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9a2 2 0 0 1 2-2Zm3-2h4"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Backend</h4>
-        <ul class="detail-list">
-          <li>C# / .NET</li>
-          <li>ASP.NET Core MVC</li>
-          <li>Entity Framework Core</li>
-          <li>ASP.NET Identity (Authentication & Authorization)</li>
-          <li>REST API design</li>
-          <li>Role-based access control</li>
-        </ul>
-      </div>
-    </div>
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M4 5h16v14H4zM8 9h8M8 13h6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Frontend</h4>
-        <ul class="detail-list">
-          <li>HTML5 / CSS3</li>
-          <li>JavaScript (ES6+)</li>
-          <li>TypeScript</li>
-          <li>Angular</li>
-          <li>Component-based UI architecture</li>
-          <li>Responsive design</li>
-        </ul>
-      </div>
-    </div>
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M4 6h16M4 10h16M4 14h10"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Databases</h4>
-        <ul class="detail-list">
-          <li>SQL Server</li>
-          <li>PostgreSQL</li>
-          <li>SQLite</li>
-          <li>Schema design & relational modeling</li>
-        </ul>
-      </div>
-    </div>
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M6 12h12M6 8h12M6 16h8"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Tools & Environment</h4>
-        <ul class="detail-list">
-          <li>Visual Studio / VS Code</li>
-          <li>Node.js & npm</li>
-          <li>Git / GitHub</li>
-          <li>Supabase</li>
-          <li>Vercel / Netlify (explored)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="section-divider" role="presentation"></div>
-  <h3 class="section-title">education</h3>
-  <div class="services-grid" role="list">
-    
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M3 7l9-4 9 4-9 4-9-4Zm0 0v6l9 4 9-4V7"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Systemutveckling .NET</h4>
-        <p>4 sep 2023 - 25 apr 2025 · Distans</p>
-        <p>Studerar YH-programmet Systemutvecklare .NET med AI kompetens via EduGrade.</p>
-      </div>
-    </div>
-    
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M3 7l9-4 9 4-9 4-9-4Zm0 0v6l9 4 9-4V7"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Gymnasieexamen</h4>
-        <p>sep 1994 - jul 1998 · St. Anna gymnasieskola, Asmara, Eritrea</p>
-        <p>Läst allmänna gymnasiestudier.</p>
-      </div>
-    </div>
-    
-  </div>
-  <div class="section-divider" role="presentation"></div>
-  <h3 class="section-title">courses</h3>
-  <div class="services-grid" role="list">
-    
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M5 6h14M5 10h14M5 14h10"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Programmering 1</h4>
-        <p>jan 2023 - juni 2023 · Hermods, Distans</p>
-        <p>Läste Programmering 1 med inriktning i C# via Hermods Komvux.</p>
-      </div>
-    </div>
-    
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M5 6h14M5 10h14M5 14h10"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Kurser i Datanätverk</h4>
-        <p>aug 2020 - dec 2020 · LTU, Skellefteå Campus, Skellefteå</p>
-        <p>Läste kurser Matematik för nätverkstekniker samt Digitala och analoga system i programmet Datanätverk vid Luleå tekniska universitet i Skellefteå.</p>
-      </div>
-    </div>
-    
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M5 6h14M5 10h14M5 14h10"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Kurs i förhandlingsteknik</h4>
-        <p>mar 2011 · Riyadh, Saudi Arabia</p>
-        <p>Genomgått 3 olika workshop via Gameplan institut: att förbättra förhandlingsteknik, utbildning om verkställande verksamhet genom KPI, detaljhandels &amp; påverkande sälj färdigheter.</p>
-      </div>
-    </div>
-    
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M5 6h14M5 10h14M5 14h10"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Kurs i presentationsteknik</h4>
-        <p>apr 2009 · Riyadh, Saudi Arabia</p>
-        <p>2 dagars workshop för att förbättra presentationsteknik via Progress management consultants.</p>
-      </div>
-    </div>
-    
-    <div class="service-card" role="listitem">
-      <span class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-          <path
-            d="M5 6h14M5 10h14M5 14h10"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-      <div>
-        <h4>Kompetensutvecklingskurs</h4>
-        <p>2009 · Riyadh, Saudi Arabia</p>
-        <p>6 dagars kurs på avancerad program för sälj handledare.</p>
-      </div>
-    </div>
-    
-  </div>
-</article>
+</section>
+
+        </article>
 
         <article class="panel" id="contact" data-index="5">
-  <h2>send message</h2>
-  <p class="work-intro">Let’s talk about your next product release.</p>
-  <form>
-    <div class="form-row">
-      <label>
-        First name
-        <input type="text" name="firstName" autocomplete="given-name" />
-      </label>
-      <label>
-        Last name
-        <input type="text" name="lastName" autocomplete="family-name" />
-      </label>
+            <h2 data-i18n="contact.title">Contact</h2>
+  <p class="work-intro contact-kicker" data-i18n="contact.intro">Let's Work Together</p>
+  <div class="about-underline" role="presentation"></div>
+
+  <section class="contact-layout">
+    <div class="contact-copy">
+      <h3 data-i18n="contact.heading">Get In Touch</h3>
+      <p class="contact-description" data-i18n="contact.description">
+        I'm always interested in hearing about new projects and opportunities.
+        Whether you have a question or just want to say hi, feel free to reach out!
+      </p>
+
+      <div class="contact-details" role="list">
+        <article class="contact-detail" role="listitem">
+          <span class="contact-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 7h16v10H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 8l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <div class="contact-detail-body">
+            <p class="contact-detail-label" data-i18n="contact.details.email.label">Email</p>
+            <a class="contact-detail-value" href="mailto:efremg69@gmail.com">efremg69@gmail.com</a>
+          </div>
+        </article>
+
+        <article class="contact-detail" role="listitem">
+          <span class="contact-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M6.5 4.5h3l1.2 3.2-1.9 1.5a13 13 0 0 0 6 6l1.5-1.9 3.2 1.2v3a1.2 1.2 0 0 1-1.3 1.2A15.7 15.7 0 0 1 5.3 5.8 1.2 1.2 0 0 1 6.5 4.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <div class="contact-detail-body">
+            <p class="contact-detail-label" data-i18n="contact.details.phone.label">Phone</p>
+            <a class="contact-detail-value" href="tel:+46735570636">+46 73 557 06 36</a>
+          </div>
+        </article>
+
+        <article class="contact-detail" role="listitem">
+          <span class="contact-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21s6-5.3 6-10a6 6 0 1 0-12 0c0 4.7 6 10 6 10Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7" />
+            </svg>
+          </span>
+          <div class="contact-detail-body">
+            <p class="contact-detail-label" data-i18n="contact.details.address.label">Location</p>
+            <p class="contact-detail-value" data-i18n="contact.details.address.value">Anaset, Sweden</p>
+          </div>
+        </article>
+      </div>
     </div>
-    <label>
-      Email
-      <input type="email" name="email" autocomplete="email" />
-    </label>
-    <label>
-      Message
-      <textarea name="message"></textarea>
-    </label>
-    <button class="primary" type="submit">Send message</button>
-  </form>
-</article>
+
+    <div class="contact-actions contact-availability" aria-label="Availability" data-i18n-aria-label="contact.availability.aria">
+      <h4 class="contact-actions-title" data-i18n="contact.availability.title">Availability</h4>
+      <h5 class="contact-availability-heading" data-i18n="contact.availability.heading">Available for Opportunities</h5>
+      <p class="contact-availability-description" data-i18n="contact.availability.description">
+        Currently open to full-time roles, freelance projects, or collaborations within full-stack development and modern web applications.
+      </p>
+      <ul class="contact-availability-list">
+        <li data-i18n="contact.availability.point1">Full-stack .NET development</li>
+        <li data-i18n="contact.availability.point2">Clean and scalable architecture</li>
+        <li data-i18n="contact.availability.point3">Strong business and product understanding</li>
+      </ul>
+      <p class="contact-availability-footnote" data-i18n="contact.availability.footnote">Based in Sweden • Open to remote work</p>
+    </div>
+  </section>
+
+        </article>
 
       </section>
     </main>
