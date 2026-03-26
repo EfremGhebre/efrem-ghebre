@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="src/images/logo.svg" alt="Efrem Ghebre Portfolio Logo" width="320" />
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/Eleventy-11ty-333333?logo=eleventy&logoColor=white" alt="Eleventy" />
   <img src="https://img.shields.io/badge/Nunjucks-Templates-5B3B8C" alt="Nunjucks" />
   <img src="https://img.shields.io/badge/Vanilla%20JS-ES6-F7DF1E?logo=javascript&logoColor=000" alt="JavaScript" />
@@ -12,16 +8,30 @@
 # Efrem Ghebre - Portfolio
 
 Modern, single-page developer portfolio built with Eleventy, Nunjucks, and
-vanilla HTML/CSS/JS. The layout uses a fixed rail, profile card, and a sliding
-content panel system, with data-driven sections sourced at build time.
+vanilla HTML/CSS/JS. The layout uses a fixed rail navigation, profile card,
+and animated content panel system with build-time data sources.
 
 ## Highlights
 
 - Sliding panel navigation with smooth transitions
+- Dark/light theme toggle and EN/SV language toggle
 - Build-time GitHub repo data via Eleventy data files
 - Education and work experience sourced from JSON
 - Accessible, keyboard-friendly navigation and semantics
 - Modular templates and split CSS for maintainability
+- Responsive behavior for tablet and mobile breakpoints
+
+## Latest Updates
+
+- Responsive optimization for:
+  - Desktop: `1024px+` (desktop layout preserved)
+  - Tablet: `768px-1023px`
+  - Mobile: `<768px`
+- Mobile top-bar behavior for navigation controls and toggles
+- Updated project screenshots in `src/assets/projects/`
+- Live app links added in Projects:
+  - VibeMix: [https://vibemix.app/](https://vibemix.app/)
+  - Nest: [https://your-nest.vercel.app/](https://your-nest.vercel.app/)
 
 ## Tech Stack
 
@@ -37,32 +47,22 @@ content panel system, with data-driven sections sourced at build time.
 - `src/styles/` split CSS (base, layout, components, responsive)
 - `dist/` build output (generated)
 
-## Getting Started
+## Quick Start
 
-Install dependencies:
-
-```
+```bash
 npm install
-```
-
-Run the dev server:
-
-```
 npm run dev
 ```
 
-Build for production:
+Production build:
 
-```
+```bash
 npm run build
 ```
 
-## Environment Variables
+Optional `.env` (recommended for higher GitHub API limits):
 
-GitHub API calls can be authenticated to avoid rate limits. Create a `.env`
-file in the project root:
-
-```
+```env
 GITHUB_TOKEN=your_token_here
 ```
 
@@ -75,4 +75,4 @@ GITHUB_TOKEN=your_token_here
 
 ## Screenshot
 
-![Portfolio layout preview](src/images/screenshot.svg)
+![Portfolio layout preview](src/assets/projects/web-portfolio.png)
