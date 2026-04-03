@@ -37,7 +37,7 @@ const translations = {
     "about.meta.status": "Available for work",
     "about.meta.languages": "Fluent in 4 languages",
     "about.intro":
-      "I’m Efrem, a .NET developer focused on building structured and scalable web applications. I work across backend and frontend to create reliable and maintainable systems. With a background in project leadership and business operations, I bring a practical, solution-oriented approach to development and enjoy turning ideas into working applications.",
+      "I’m Efrem, a <span class=\"about-meta-accent\">.NET developer</span> focused on building structured and scalable web applications. I work across backend and frontend to create reliable and maintainable systems. With a background in project leadership and business operations, I bring a practical, solution-oriented approach to development and enjoy turning ideas into working applications.",
     "about.section.core": "Core Competencies",
     "about.services.title": "What I Do",
     "about.card.fullstack.title": "Full-Stack .NET Development",
@@ -316,7 +316,7 @@ const translations = {
     "about.meta.status": "Tillgänglig för arbete",
     "about.meta.languages": "Flytande i 4 språk",
     "about.intro":
-      "Jag är Efrem, en <strong>fullstackutvecklare</strong> specialiserad på <strong>.NET och modern webbarkitektur</strong>. Jag designar och bygger strukturerade, skalbara webbapplikationer från databas till gränssnitt. Min bakgrund inom ASP.NET Core, Entity Framework och moderna frontendtekniker gör att jag kan leverera säkra, underhållbara system med polerade, prestandafokuserade användarupplevelser.",
+      "Jag är Efrem, en <span class=\"about-meta-accent\">.NET-utvecklare</span> med fokus på att bygga strukturerade och skalbara webbapplikationer. Jag arbetar med både backend och frontend för att skapa tillförlitliga och underhållbara system. Med bakgrund inom projektledning och affärsnära roller har jag ett praktiskt, lösningsorienterat arbetssätt och trivs med att omvandla idéer till fungerande applikationer.",
     "about.section.core": "Kärnkompetenser",
     "about.services.title": "Det här gör jag",
     "about.card.fullstack.title": "Fullstackutveckling",
