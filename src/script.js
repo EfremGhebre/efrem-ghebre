@@ -29,14 +29,15 @@ const translations = {
     "profile.aria": "Profile",
     "profile.role": "Full-Stack Developer",
     "profile.socials": "Social links",
-    "profile.resume": "Download CV ->",
+    "profile.resume": "Download CV ↓",
+    "profile.resumeHref": "resume/cv.en.html",  
     "about.title": "About Me",
     "about.meta": "Based in Sweden · Available for work · Fluent in 4 languages",
     "about.meta.location": "Based in Sweden",
     "about.meta.status": "Available for work",
     "about.meta.languages": "Fluent in 4 languages",
     "about.intro":
-      "I'm Efrem, a full-stack developer specializing in .NET and modern web architecture. I design and build structured, scalable web applications from database to interface. My background in ASP.NET Core, Entity Framework, and modern frontend technologies allows me to deliver secure, maintainable systems with polished, performance-focused user experiences.",
+      "I'm Efrem, a <strong>full-stack developer</strong> specializing in <strong>.NET and modern web architecture</strong>. I design and build structured, scalable web applications from database to interface. My background in ASP.NET Core, Entity Framework, and modern frontend technologies allows me to deliver secure, maintainable systems with polished, performance-focused user experiences.",
     "about.section.core": "Core Competencies",
     "about.services.title": "What I Do",
     "about.card.fullstack.title": "Full-Stack Development",
@@ -63,7 +64,7 @@ const translations = {
     "projects.links.case": "Case study",
     "projects.card.vibemix.label": "Featured project",
     "projects.card.vibemix.desc":
-      "Mood-based playlist generator designed to create personalized music experiences using modern web technologies.",
+      "Mood-based music app that recommends playlists by mood, supports multilingual onboarding, and opens mixes in Spotify, Apple Music, or YouTube Music.",
     "projects.card.nest.label": "Product concept",
     "projects.card.nest.desc":
       "Concept platform focused on simplifying everyday digital experiences through clean design and structured systems.",
@@ -254,24 +255,24 @@ const translations = {
     "skills.skill.performance.desc": "Rendering optimization and Lighthouse tuning.",
     "resume.title": "Resume",
     "resume.intro": "Download the latest CV as a PDF.",
-    "resume.button": "Download CV ->",
+    "resume.button": "Download CV ↓",
     "contact.title": "Contact",
-    "contact.intro": "Let's Work Together",
-    "contact.heading": "Get In Touch",
+    "contact.intro": "Open to Opportunities",
+    "contact.heading": "Let's Build Something Together",
     "contact.description":
-      "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+    "I’m a .NET developer with a background in project leadership. I enjoy building practical, scalable solutions and turning ideas into real systems.",
     "contact.details.email.label": "Email",
     "contact.details.phone.label": "Phone",
     "contact.details.address.label": "Location",
     "contact.details.address.value": "Ånäset, Sweden",
     "contact.availability.aria": "Availability",
     "contact.availability.title": "Availability",
-    "contact.availability.heading": "Available for Opportunities",
+    "contact.availability.heading": "Open to .NET Developer Roles",
     "contact.availability.description":
       "Currently open to full-time roles, freelance projects, or collaborations within full-stack development and modern web applications.",
-    "contact.availability.point1": "Full-stack .NET development",
-    "contact.availability.point2": "Clean and scalable architecture",
-    "contact.availability.point3": "Strong business and product understanding",
+    "contact.availability.point1": "Full-stack development with .NET and modern web technologies",
+    "contact.availability.point2": "Building structured and maintainable backend systems",
+    "contact.availability.point3": "Combining technical skills with real-world business understanding",
     "contact.availability.footnote": "Based in Sweden • Open to remote work",
     "contact.form.name": "Your Name",
     "contact.form.email": "Your Email",
@@ -307,14 +308,15 @@ const translations = {
     "profile.aria": "Profil",
     "profile.role": "Fullstackutvecklare",
     "profile.socials": "Sociala länkar",
-    "profile.resume": "Ladda ner CV ->",
+    "profile.resumeHref": "resume/cv.sv.html",  
+    "profile.resume": "Ladda ner CV ↓",
     "about.title": "Om mig",
     "about.meta": "Baserad i Sverige · Tillgänglig för arbete · Flytande i 4 språk",
     "about.meta.location": "Baserad i Sverige",
     "about.meta.status": "Tillgänglig för arbete",
     "about.meta.languages": "Flytande i 4 språk",
     "about.intro":
-      "Jag är Efrem, en fullstackutvecklare specialiserad på .NET och modern webbarkitektur. Jag designar och bygger strukturerade, skalbara webbapplikationer från databas till gränssnitt. Min bakgrund inom ASP.NET Core, Entity Framework och moderna frontendtekniker gör att jag kan leverera säkra, underhållbara system med polerade, prestandafokuserade användarupplevelser.",
+      "Jag är Efrem, en <strong>fullstackutvecklare</strong> specialiserad på <strong>.NET och modern webbarkitektur</strong>. Jag designar och bygger strukturerade, skalbara webbapplikationer från databas till gränssnitt. Min bakgrund inom ASP.NET Core, Entity Framework och moderna frontendtekniker gör att jag kan leverera säkra, underhållbara system med polerade, prestandafokuserade användarupplevelser.",
     "about.section.core": "Kärnkompetenser",
     "about.services.title": "Det här gör jag",
     "about.card.fullstack.title": "Fullstackutveckling",
@@ -341,7 +343,7 @@ const translations = {
     "projects.links.case": "Case study",
     "projects.card.vibemix.label": "Utvalt projekt",
     "projects.card.vibemix.desc":
-      "Stämningsbaserad spellistegenerator som skapar personliga musikupplevelser med moderna webbtekniker.",
+      "Stämningsbaserad musikapp som rekommenderar spellistor efter humör, stödjer flerspråkig onboarding och öppnar mixar i Spotify, Apple Music eller YouTube Music.",
     "projects.card.nest.label": "Produktkoncept",
     "projects.card.nest.desc":
       "Konceptplattform som förenklar vardagens digitala upplevelser med ren design och strukturerade system.",
@@ -533,24 +535,24 @@ const translations = {
     "skills.skill.performance.desc": "Renderingoptimering och Lighthouse-tuning.",
     "resume.title": "CV",
     "resume.intro": "Ladda ner senaste CV som PDF.",
-    "resume.button": "Ladda ner CV ->",
+    "resume.button": "Ladda ner CV ↓",
     "contact.title": "Kontakt",
-    "contact.intro": "Låt oss arbeta tillsammans",
-    "contact.heading": "Kontakta mig",
+    "contact.intro": "Öppen för möjligheter",
+    "contact.heading": "Låt oss bygga något tillsammans",
     "contact.description":
-      "Jag är alltid intresserad av nya projekt och möjligheter. Oavsett om du har en fråga eller bara vill säga hej är du varmt välkommen att höra av dig.",
+      "Jag är en .NET-utvecklare med bakgrund inom projektledning. Jag tycker om att bygga praktiska, skalbara lösningar och förvandla idéer till riktiga system.",
     "contact.details.email.label": "E-post",
     "contact.details.phone.label": "Telefon",
     "contact.details.address.label": "Plats",
     "contact.details.address.value": "Ånäset, Sverige",
     "contact.availability.aria": "Tillgänglighet",
     "contact.availability.title": "Tillgänglighet",
-    "contact.availability.heading": "Tillgänglig för möjligheter",
+    "contact.availability.heading": "Öppen för .NET-utvecklarroller",
     "contact.availability.description":
       "Öppen för heltidsroller, frilansprojekt eller samarbeten inom fullstackutveckling och moderna webbapplikationer.",
-    "contact.availability.point1": "Fullstackutveckling i .NET",
-    "contact.availability.point2": "Ren och skalbar arkitektur",
-    "contact.availability.point3": "Stark förståelse för affär och produkt",
+    "contact.availability.point1": "Fullstackutveckling med .NET och moderna webbtekniker",
+    "contact.availability.point2": "Bygga strukturerade och underhållbara backendsystem",
+    "contact.availability.point3": "Kombinera teknisk kompetens med verklig affärsförståelse",
     "contact.availability.footnote": "Baserad i Sverige • Öppen för distansarbete",
     "contact.form.name": "Ditt namn",
     "contact.form.email": "Din e-post",
@@ -565,7 +567,9 @@ const translations = {
 
 const applyTranslations = (lang) => {
   const dict = translations[lang] || translations.en;
-  const elements = document.querySelectorAll("[data-i18n], [data-i18n-aria-label], [data-i18n-title]");
+  const elements = document.querySelectorAll(
+    "[data-i18n], [data-i18n-html], [data-i18n-aria-label], [data-i18n-title]"
+  );
 
   elements.forEach((el) => {
     const textKey = el.getAttribute("data-i18n");
@@ -573,8 +577,17 @@ const applyTranslations = (lang) => {
       el.textContent = dict[textKey];
     }
 
+    const htmlKey = el.getAttribute("data-i18n-html");
+    if (htmlKey && dict[htmlKey]) {
+      el.innerHTML = dict[htmlKey];
+    }
+
     Array.from(el.attributes).forEach((attr) => {
-      if (!attr.name.startsWith("data-i18n-") || attr.name === "data-i18n") return;
+      if (
+        !attr.name.startsWith("data-i18n-") ||
+        attr.name === "data-i18n" ||
+        attr.name === "data-i18n-html"
+      ) return;
       const targetAttr = attr.name.replace("data-i18n-", "");
       const key = attr.value;
       if (dict[key]) {

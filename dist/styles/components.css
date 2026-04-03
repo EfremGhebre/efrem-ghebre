@@ -569,6 +569,25 @@
   letter-spacing: 0.4px;
 }
 
+.about-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 20%, rgba(255, 80, 80, 0.06), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-section > * {
+  position: relative;
+  z-index: 1;
+}
+
 .about-underline {
   width: 64px;
   height: 4px;
@@ -627,6 +646,17 @@
   max-width: 98%;
 }
 
+.about-section .about-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.about-section .about-intro strong {
+  color: #ff4d4d;
+  font-weight: 500;
+}
+
 .about-services-title {
   margin: 0 0 20px;
   font-size: var(--fs-h4);
@@ -677,6 +707,26 @@
   color: var(--text-body);
   font-size: var(--fs-meta);
   line-height: 1.45;
+}
+
+.about-section .about-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.about-section .about-card:hover,
+.about-section .about-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(255, 80, 80, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.about-section .about-card-icon {
+  transition: transform 0.25s ease;
+}
+
+.about-section .about-card:hover .about-card-icon,
+.about-section .about-card:focus-within .about-card-icon {
+  transform: scale(1.05);
 }
 
 .skills-dashboard h2 {
@@ -1454,28 +1504,39 @@ html[data-theme="light"] .skills-chip {
   justify-content: center;
   min-height: 44px;
   padding: 10px 18px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.02);
+  border-radius: 11px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(24, 28, 36, 0.95), rgba(17, 21, 28, 0.95));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 4px 10px rgba(0, 0, 0, 0.25);
   color: var(--text);
   text-decoration: none;
   font-size: var(--fs-copy);
   font-weight: 700;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  transition: border-color 250ms ease, background 250ms ease, color 250ms ease, box-shadow 250ms ease;
 }
 
 #projects .portfolio-btn:hover,
 #projects .portfolio-btn:focus-visible {
-  transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.34);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: color-mix(in srgb, var(--accent) 58%, transparent);
+  background: linear-gradient(180deg, rgba(24, 28, 36, 0.95), rgba(17, 21, 28, 0.95));
+  color: var(--accent);
   outline: none;
 }
 
 #projects .portfolio-btn-primary {
   background: var(--accent);
   border-color: var(--accent);
-  color: #0c0f14;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(226, 75, 59, 0.24);
+  transition: border-color 250ms ease, background 250ms ease, color 250ms ease, box-shadow 250ms ease;
+}
+
+#projects .portfolio-btn-primary:hover,
+#projects .portfolio-btn-primary:focus-visible {
+  background: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 74%, white 26%);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(226, 75, 59, 0.3);
 }
 
 /* Unified rich card surface across all sections */
@@ -1578,6 +1639,10 @@ html[data-theme="light"] .panel :is(p, li) {
 
 html[data-theme="light"] :is(.journey-subtitle, .work-intro, .about-meta-summary, .experience-period, .skills-subtitle, .skills-tech-group-title, #projects .projects-subtitle) {
   color: #647286;
+}
+
+html[data-theme="light"] .about-section .about-intro {
+  color: #425269;
 }
 
 html[data-theme="light"] :is(
@@ -1717,6 +1782,36 @@ html[data-theme="light"] :is(#contact .contact-action, #projects .portfolio-btn,
 html[data-theme="light"] :is(#contact .contact-action, #projects .portfolio-btn, .project-link):focus-visible {
   background: #ffffff;
   border-color: rgba(105, 118, 136, 0.35);
+  color: #1f2f43;
+}
+
+html[data-theme="light"] #projects .portfolio-btn {
+  border-color: rgba(120, 132, 149, 0.25);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 247, 253, 0.88));
+  color: #44566d;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 8px 18px rgba(77, 92, 112, 0.14);
+}
+
+html[data-theme="light"] #projects .portfolio-btn:hover,
+html[data-theme="light"] #projects .portfolio-btn:focus-visible {
+  border-color: color-mix(in srgb, var(--accent) 46%, rgba(103, 116, 134, 0.28));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(239, 245, 252, 0.95));
+  color: var(--accent);
+}
+
+html[data-theme="light"] #projects .portfolio-btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(255, 111, 0, 0.26);
+}
+
+html[data-theme="light"] #projects .portfolio-btn-primary:hover,
+html[data-theme="light"] #projects .portfolio-btn-primary:focus-visible {
+  background: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 72%, white 28%);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(255, 111, 0, 0.3);
 }
 
 html[data-theme="light"] #contact .contact-availability {

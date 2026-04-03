@@ -32,6 +32,11 @@ and animated content panel system with build-time data sources.
 - Live app links added in Projects:
   - VibeMix: [https://vibemix.app/](https://vibemix.app/)
   - Nest: [https://your-nest.vercel.app/](https://your-nest.vercel.app/)
+- About Me section visual enhancements (background depth, text hierarchy, card micro-interactions)
+- Project button interactions updated to match site-wide toggler style
+- Printable HTML resume pages (EN/SV) with shared CSS, linked from the CV button
+- CV button is language-aware — opens the matching resume based on active language
+- Contact section copy refreshed for both EN and SV translations
 
 ## Tech Stack
 
@@ -45,6 +50,7 @@ and animated content panel system with build-time data sources.
 - `src/_includes/` reusable Nunjucks partials
 - `src/_data/` build-time data sources (GitHub + resume)
 - `src/styles/` split CSS (base, layout, components, responsive)
+- `src/resume/` standalone printable CV pages (EN/SV) with shared CSS
 - `dist/` build output (generated)
 
 ## Quick Start

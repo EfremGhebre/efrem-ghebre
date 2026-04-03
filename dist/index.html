@@ -115,7 +115,7 @@
     <p class="role" data-i18n="profile.role">Full-Stack Developer</p>
     <div class="profile-actions">
       <div class="socials" aria-label="Social links" data-i18n-aria-label="profile.socials">
-        <a href="https://www.linkedin.com" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/efrem-ghebre/" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M6.5 9H4v11h2.5V9Zm-1.25-4A1.45 1.45 0 1 0 5.25 8a1.45 1.45 0 0 0 0-2.9ZM20 14.2c0-3.2-1.7-4.7-4-4.7a3.5 3.5 0 0 0-3.2 1.7V9H10v11h2.5v-6.1c0-1.6.6-2.6 2-2.6s1.8 1.1 1.8 2.6V20H20Z"
@@ -123,7 +123,7 @@
             />
           </svg>
         </a>
-        <a href="https://github.com" aria-label="GitHub">
+        <a href="https://github.com/efremghebre" aria-label="GitHub">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1-.9-1.2-.9-1.2-.8-.5.1-.5.1-.5 1 .1 1.5 1 1.5 1 .8 1.5 2.2 1.1 2.7.8.1-.6.3-1.1.6-1.3-2.2-.2-4.6-1.1-4.6-4.9 0-1.1.4-2.1 1-2.8-.1-.2-.4-1.2.1-2.5 0 0 .9-.3 2.9 1a10 10 0 0 1 5.2 0c2-1.3 2.9-1 2.9-1 .5 1.3.2 2.3.1 2.5.6.7 1 1.6 1 2.8 0 3.8-2.4 4.7-4.6 4.9.3.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"
@@ -132,7 +132,7 @@
           </svg>
         </a>
       </div>
-      <a class="socials-button" href="assets/CV Efrem Ghebre.pdf" download data-i18n="profile.resume">Download CV →</a>
+      <a class="socials-button" href="resume/cv.en.html" target="_blank" data-i18n="profile.resume" data-i18n-href="profile.resumeHref">Download CV ↓</a>
     </div>
   </div>
 </section>
@@ -140,7 +140,7 @@
       <section class="panel-shell" aria-live="polite">
         <article class="panel active" id="about" data-index="0">
           <section class="about-section">
-  <h2 data-i18n="about.title">About Me</h2>
+  <h2 class="about-title" data-i18n="about.title">About Me</h2>
   <div class="about-underline" role="presentation"></div>
 
   <p class="about-meta-summary">
@@ -151,7 +151,7 @@
     <span data-i18n="about.meta.languages">Fluent in 4 languages</span>
   </p>
 
-  <p class="about-intro" data-i18n="about.intro">
+  <p class="about-intro" data-i18n-html="about.intro">
     I’m Efrem, a full-stack developer specializing in .NET and modern web architecture.
     I design and build structured, scalable web applications from database to interface.
     With a background in ASP.NET Core, Entity Framework, and modern frontend technologies,
@@ -161,8 +161,8 @@
   <h3 class="about-services-title" data-i18n="about.services.title">What I Do</h3>
 
   <div class="about-services-grid" role="list">
-    <article class="about-service-card" role="listitem">
-      <span class="about-service-icon" aria-hidden="true">
+    <article class="about-service-card about-card" role="listitem">
+      <span class="about-service-icon about-card-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
           <path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm0 13h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
@@ -171,8 +171,8 @@
       <p data-i18n="about.card.fullstack.desc">End-to-end application development using ASP.NET Core, Entity Framework, and modern frontend standards.</p>
     </article>
 
-    <article class="about-service-card" role="listitem">
-      <span class="about-service-icon" aria-hidden="true">
+    <article class="about-service-card about-card" role="listitem">
+      <span class="about-service-icon about-card-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
           <path d="M4 14c4-1 6-4 7-8 3 2 5 5 7 8-3 1-6 2-7 5-1-3-3-4-7-5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
@@ -181,8 +181,8 @@
       <p data-i18n="about.card.frontend.desc">Responsive, accessible interfaces built with clean architecture, modern CSS, and structured JavaScript.</p>
     </article>
 
-    <article class="about-service-card" role="listitem">
-      <span class="about-service-icon" aria-hidden="true">
+    <article class="about-service-card about-card" role="listitem">
+      <span class="about-service-icon about-card-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
           <path d="M6 8h12l2 4-2 4H6l-2-4 2-4Zm2-3h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
@@ -191,8 +191,8 @@
       <p data-i18n="about.card.database.desc">Relational schema design, migrations, and API-ready data modeling with performance in mind.</p>
     </article>
 
-    <article class="about-service-card" role="listitem">
-      <span class="about-service-icon" aria-hidden="true">
+    <article class="about-service-card about-card" role="listitem">
+      <span class="about-service-icon about-card-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
           <path d="M12 3 5 6v6c0 4.5 3 8.3 7 9 4-0.7 7-4.5 7-9V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
@@ -221,7 +221,7 @@
       <span class="portfolio-kicker" data-i18n="projects.card.vibemix.label">Featured project</span>
       <h3>VibeMix</h3>
       <p data-i18n="projects.card.vibemix.desc">
-        Mood-based playlist generator designed to create personalized music experiences using modern web technologies.
+        Mood-based music app that recommends playlists by mood, supports multilingual onboarding, and opens mixes in Spotify, Apple Music, or YouTube Music.
       </p>
       <div class="portfolio-tags">
         <span>Angular</span>
@@ -1595,7 +1595,7 @@ focused on building scalable and user-friendly applications.
 
   <section class="contact-layout">
     <div class="contact-copy">
-      <h3 data-i18n="contact.heading">Get In Touch</h3>
+      <h3 data-i18n="contact.heading">Let’s Build Something Together</h3>
       <p class="contact-description" data-i18n="contact.description">
         I'm always interested in hearing about new projects and opportunities.
         Whether you have a question or just want to say hi, feel free to reach out!
@@ -1644,14 +1644,14 @@ focused on building scalable and user-friendly applications.
 
     <div class="contact-actions contact-availability" aria-label="Availability" data-i18n-aria-label="contact.availability.aria">
       <h4 class="contact-actions-title" data-i18n="contact.availability.title">Availability</h4>
-      <h5 class="contact-availability-heading" data-i18n="contact.availability.heading">Available for Opportunities</h5>
+      <h5 class="contact-availability-heading" data-i18n="contact.availability.heading">Open to .NET Developer Roles</h5>
       <p class="contact-availability-description" data-i18n="contact.availability.description">
         Currently open to full-time roles, freelance projects, or collaborations within full-stack development and modern web applications.
       </p>
       <ul class="contact-availability-list">
-        <li data-i18n="contact.availability.point1">Full-stack .NET development</li>
-        <li data-i18n="contact.availability.point2">Clean and scalable architecture</li>
-        <li data-i18n="contact.availability.point3">Strong business and product understanding</li>
+        <li data-i18n="contact.availability.point1">Full-stack development with .NET and modern web technologies</li>
+        <li data-i18n="contact.availability.point2">Building structured and maintainable backend systems</li>
+        <li data-i18n="contact.availability.point3">Combining technical skills with real-world business understanding</li>
       </ul>
       <p class="contact-availability-footnote" data-i18n="contact.availability.footnote">Based in Sweden • Open to remote work</p>
     </div>
