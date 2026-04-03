@@ -37,13 +37,13 @@ const translations = {
     "about.meta.status": "Available for work",
     "about.meta.languages": "Fluent in 4 languages",
     "about.intro":
-      "I'm Efrem, a <strong>full-stack developer</strong> specializing in <strong>.NET and modern web architecture</strong>. I design and build structured, scalable web applications from database to interface. My background in ASP.NET Core, Entity Framework, and modern frontend technologies allows me to deliver secure, maintainable systems with polished, performance-focused user experiences.",
+      "I’m Efrem, a .NET developer focused on building structured and scalable web applications. I work across backend and frontend to create reliable and maintainable systems. With a background in project leadership and business operations, I bring a practical, solution-oriented approach to development and enjoy turning ideas into working applications.",
     "about.section.core": "Core Competencies",
     "about.services.title": "What I Do",
-    "about.card.fullstack.title": "Full-Stack Development",
+    "about.card.fullstack.title": "Full-Stack .NET Development",
     "about.card.fullstack.desc":
       "End-to-end application development using ASP.NET Core, Entity Framework, and modern frontend standards.",
-    "about.card.frontend.title": "Frontend Engineering",
+    "about.card.frontend.title": "Frontend Development with Angular",
     "about.card.frontend.desc":
       "Responsive, accessible interfaces built with clean architecture, modern CSS, and structured JavaScript.",
     "about.card.database.title": "Database Architecture",
