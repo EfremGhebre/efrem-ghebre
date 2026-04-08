@@ -17,7 +17,7 @@ and animated content panel system with build-time data sources.
 - Dark/light theme toggle and EN/SV language toggle
 - Build-time GitHub repo data via Eleventy data files
 - Education and work experience sourced from JSON
-- Accessible, keyboard-friendly navigation and semantics
+- Semantic HTML structure with baseline keyboard and ARIA support
 - Modular templates and split CSS for maintainability
 - Responsive behavior for tablet and mobile breakpoints
 
