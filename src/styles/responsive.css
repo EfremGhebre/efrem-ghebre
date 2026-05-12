@@ -250,34 +250,65 @@
     border-radius: var(--card-radius);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 16px 14px;
+    padding: 10px 12px;
     gap: 12px;
+    flex-direction: row;
+    align-items: center;
   }
 
   .profile-media {
-    width: 124px;
-    height: 124px;
-    min-height: 124px;
-    margin: 4px auto;
+    width: 64px;
+    height: 64px;
+    min-height: 64px;
+    margin: 0;
+    flex: 0 0 auto;
+    border-width: 2px;
+  }
+
+  .profile-footer {
+    flex: 1 1 auto;
+    text-align: left;
+    min-width: 0;
   }
 
   .profile h1 {
-    font-size: 28px;
-    text-align: center;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.2;
   }
 
   .profile .role {
-    text-align: center;
-    margin-bottom: 8px;
+    text-align: left;
+    margin: 2px 0 6px;
+    font-size: 13px;
   }
 
   .profile-actions {
-    gap: 12px;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
-  .socials a,
+  .socials {
+    gap: 8px;
+  }
+
+  .socials a {
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
+  }
+
+  .socials a svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .socials-button {
-    min-height: 44px;
+    min-height: 36px;
+    padding: 6px 12px;
+    font-size: 13px;
   }
 
   .panel-shell {
