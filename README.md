@@ -23,6 +23,12 @@ and animated content panel system with build-time data sources.
 
 ## Latest Updates
 
+- Added `BookWise` as the top project card in the Projects section
+- Added BookWise project links:
+  - GitHub: [https://github.com/EfremGhebre/BookWise](https://github.com/EfremGhebre/BookWise)
+  - Demo video: [https://www.youtube.com/watch?v=Skn-hXRpmW4](https://www.youtube.com/watch?v=Skn-hXRpmW4)
+- Added BookWise thumbnail asset: `src/assets/projects/bookwise-demo.png`
+- Reduced project placeholders by removing one `Coming Soon` card
 - Responsive optimization for:
   - Desktop: `1024px+` (desktop layout preserved)
   - Tablet: `768px-1023px`
