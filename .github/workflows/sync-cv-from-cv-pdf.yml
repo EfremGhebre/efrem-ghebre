@@ -1,0 +1,63 @@
+name: Sync CV From cv-pdf
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [cv-pdf-updated]
+  schedule:
+    - cron: "15 * * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-cv-from-cv-pdf
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout portfolio repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone CV source repository
+        run: git clone --depth 1 https://github.com/EfremGhebre/cv-pdf.git .tmp-cv-pdf
+
+      - name: Sync CV files into src/resume
+        run: |
+          mkdir -p src/resume/images
+          cp .tmp-cv-pdf/cv.en.html src/resume/cv.en.html
+          cp .tmp-cv-pdf/cv.sv.html src/resume/cv.sv.html
+          cp .tmp-cv-pdf/cv.css src/resume/cv.css
+          cp .tmp-cv-pdf/images/my_pic.jpg src/resume/images/my_pic.jpg
+          # Keep backward compatibility for existing relative image path.
+          cp .tmp-cv-pdf/images/my_pic.jpg src/resume/my_pic.jpg
+
+      - name: Build dist output
+        run: |
+          npm ci
+          npm run build
+
+      - name: Create pull request with sync changes
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(cv): sync from cv-pdf"
+          title: "chore(cv): sync resume from cv-pdf"
+          body: |
+            Automated sync from https://github.com/EfremGhebre/cv-pdf.
+
+            Updated:
+            - src/resume/cv.en.html
+            - src/resume/cv.sv.html
+            - src/resume/cv.css
+            - src/resume/images/my_pic.jpg
+            - src/resume/my_pic.jpg
+            - dist/resume/*
+          branch: chore/sync-cv-from-cv-pdf
+          delete-branch: true

@@ -85,6 +85,32 @@ GITHUB_TOKEN=your_token_here
 - CSS entry point is `src/style.css`, which imports split files from
   `src/styles/`.
 
+## CV Sync From External Repository
+
+This portfolio is configured to sync CV files from:
+
+- [EfremGhebre/cv-pdf](https://github.com/EfremGhebre/cv-pdf)
+
+Sync automation is defined in:
+
+- `.github/workflows/sync-cv-from-cv-pdf.yml`
+
+What it syncs into this repo:
+
+- `src/resume/cv.en.html`
+- `src/resume/cv.sv.html`
+- `src/resume/cv.css`
+- `src/resume/images/my_pic.jpg`
+
+When sync runs:
+
+- Manual run (`workflow_dispatch`)
+- Hourly schedule
+- Optional repository dispatch event (`cv-pdf-updated`)
+
+After syncing source files, the workflow also runs `npm run build` so
+`dist/resume/*` stays in sync.
+
 ## Screenshot
 
 ![Portfolio layout preview](src/assets/projects/web-portfolio.png)
