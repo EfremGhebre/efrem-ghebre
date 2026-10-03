@@ -351,6 +351,27 @@ li {
   color: var(--muted);
 }
 
+.project-links {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.project-links a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+  text-decoration: underline;
+}
+
+.project-links a + a {
+  margin-left: 12px;
+}
+
 @media (max-width: 920px) {
   .print-btn {
     top: 10px;
@@ -553,6 +574,17 @@ html {
 
   .grid-two {
     gap: 7px;
+  }
+
+  .project-links {
+    margin-top: 2px;
+    font-size: 10px;
+  }
+
+  .project-links a,
+  .note a {
+    color: #1a509b !important;
+    text-decoration: underline !important;
   }
 
   a {
