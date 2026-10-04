@@ -31,8 +31,18 @@ jobs:
       - name: Sync CV files into src/resume
         run: |
           mkdir -p src/resume/images
-          cp .tmp-cv-pdf/cv.en.html src/resume/cv.en.html
-          cp .tmp-cv-pdf/cv.sv.html src/resume/cv.sv.html
+          {
+            echo '---'
+            echo 'permalink: /resume/cv.en.html'
+            echo '---'
+            cat .tmp-cv-pdf/cv.en.html
+          } > src/resume/cv.en.html
+          {
+            echo '---'
+            echo 'permalink: /resume/cv.sv.html'
+            echo '---'
+            cat .tmp-cv-pdf/cv.sv.html
+          } > src/resume/cv.sv.html
           cp .tmp-cv-pdf/cv.css src/resume/cv.css
           cp .tmp-cv-pdf/images/my_pic.jpg src/resume/images/my_pic.jpg
           # Keep backward compatibility for existing relative image path.
