@@ -1314,28 +1314,58 @@ button.primary:focus-visible {
 
 #projects .portfolio-list {
   display: grid;
-  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
 }
 
 #projects .portfolio-card {
-  display: grid;
-  grid-template-columns: 38% 1fr;
-  align-items: stretch;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid color-mix(in srgb, var(--card-rich-border) 84%, white 16%);
+  border-radius: 16px;
   overflow: hidden;
-  background: rgba(12, 14, 18, 0.92);
+  background: color-mix(in srgb, var(--card-rich-bg) 92%, #0f1319 8%);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
 }
 
 #projects .portfolio-card-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
   min-height: 0;
-  height: calc(100% - 24px);
-  align-self: stretch;
-  margin: 12px;
-  border-radius: 16px;
+  margin: 0;
+  border-radius: 0;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.32);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#projects .portfolio-card-featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(290px, 46%) minmax(0, 1fr);
+  align-items: stretch;
+}
+
+#projects .portfolio-card-featured .portfolio-card-media {
+  aspect-ratio: auto;
+  height: 100%;
+  border-bottom: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#projects .portfolio-card-soon {
+  opacity: 0.94;
+  border-color: color-mix(in srgb, var(--card-rich-border) 76%, transparent);
+}
+
+#projects .portfolio-card-soon .portfolio-kicker {
+  color: color-mix(in srgb, var(--text-soft) 82%, var(--accent) 18%);
+}
+
+#projects .portfolio-card-soon .portfolio-btn-primary {
+  background: color-mix(in srgb, var(--accent) 58%, #2d3442 42%);
+  border-color: color-mix(in srgb, var(--accent) 64%, #3a4353 36%);
+  box-shadow: none;
 }
 
 #projects .portfolio-media-trigger {
@@ -1355,12 +1385,12 @@ button.primary:focus-visible {
   object-fit: cover;
   object-position: top center;
   display: block;
-  transition: transform 220ms ease;
+  transition: transform 260ms ease;
 }
 
 #projects .portfolio-media-trigger:hover img,
 #projects .portfolio-media-trigger:focus-visible img {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 #projects .portfolio-media-trigger:focus-visible {
@@ -1432,9 +1462,10 @@ button.primary:focus-visible {
 }
 
 #projects .portfolio-card-content {
-  padding: 22px 24px;
+  padding: 20px 20px 22px;
   display: grid;
-  gap: 12px;
+  align-content: start;
+  gap: 11px;
 }
 
 #projects .portfolio-kicker {
@@ -1453,8 +1484,8 @@ button.primary:focus-visible {
 #projects .portfolio-card-content p {
   margin: 0;
   color: var(--text-body);
-  font-size: var(--fs-copy-lg);
-  line-height: 1.45;
+  font-size: var(--fs-copy);
+  line-height: 1.5;
 }
 
 #projects .portfolio-tags {
@@ -1466,7 +1497,7 @@ button.primary:focus-visible {
 #projects .portfolio-tags span {
   display: inline-flex;
   align-items: center;
-  padding: 6px 12px;
+  padding: 6px 11px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
@@ -1495,8 +1526,10 @@ html[data-theme="light"] .skills-chip {
 
 #projects .portfolio-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-top: 2px;
+  margin-top: auto;
+  padding-top: 4px;
 }
 
 #projects .portfolio-btn {
@@ -1504,7 +1537,7 @@ html[data-theme="light"] .skills-chip {
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 11px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: linear-gradient(180deg, rgba(24, 28, 36, 0.95), rgba(17, 21, 28, 0.95));
@@ -1513,7 +1546,7 @@ html[data-theme="light"] .skills-chip {
   text-decoration: none;
   font-size: var(--fs-copy);
   font-weight: 700;
-  transition: border-color 250ms ease, background 250ms ease, color 250ms ease, box-shadow 250ms ease;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
 }
 
 #projects .portfolio-btn:hover,
@@ -1538,6 +1571,20 @@ html[data-theme="light"] .skills-chip {
   border-color: color-mix(in srgb, var(--accent) 74%, white 26%);
   color: #ffffff;
   box-shadow: 0 12px 24px rgba(226, 75, 59, 0.3);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #projects .portfolio-card:hover,
+  #projects .portfolio-card:focus-within {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--card-rich-border) 72%, white 28%);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  #projects .portfolio-card:hover .portfolio-card-media img,
+  #projects .portfolio-card:focus-within .portfolio-card-media img {
+    transform: scale(1.02);
+  }
 }
 
 /* Unified rich card surface across all sections */
@@ -1582,6 +1629,12 @@ html[data-theme="light"] .skills-chip {
   transform: translateY(-4px);
   border-color: color-mix(in srgb, var(--card-rich-border) 72%, white 28%);
   box-shadow: 0 20px 38px rgba(0, 0, 0, 0.4);
+}
+
+#projects .portfolio-card:hover,
+#projects .portfolio-card:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
 :is(
@@ -1748,15 +1801,20 @@ html[data-theme="light"] #projects .portfolio-card {
 }
 
 html[data-theme="light"] #projects .portfolio-card-media {
-  margin: 12px;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
-  border: 1px solid rgba(126, 139, 156, 0.2);
-  box-shadow: 0 8px 20px rgba(88, 103, 123, 0.14);
+  border: 0;
+  border-bottom: 1px solid rgba(126, 139, 156, 0.22);
+  box-shadow: none;
 }
 
 html[data-theme="light"] #projects .portfolio-card-media img {
   height: 100%;
+}
+
+html[data-theme="light"] #projects .portfolio-card-featured .portfolio-card-media {
+  border-right: 1px solid rgba(126, 139, 156, 0.22);
+  border-bottom: 0;
 }
 
 html[data-theme="light"] :is(.socials-button, button.primary, .primary-button, #contact .contact-action-primary, #projects .portfolio-btn-primary, .project-link.project-link-primary) {
