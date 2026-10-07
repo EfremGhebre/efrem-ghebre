@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: sync-cv-from-cv-pdf
@@ -53,21 +52,23 @@ jobs:
           npm ci
           npm run build
 
-      - name: Create pull request with sync changes
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(cv): sync from cv-pdf"
-          title: "chore(cv): sync resume from cv-pdf"
-          body: |
-            Automated sync from https://github.com/EfremGhebre/cv-pdf.
+      - name: Commit and push sync changes to default branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-            Updated:
-            - src/resume/cv.en.html
-            - src/resume/cv.sv.html
-            - src/resume/cv.css
-            - src/resume/images/my_pic.jpg
-            - src/resume/my_pic.jpg
-            - dist/resume/*
-          branch: chore/sync-cv-from-cv-pdf
-          delete-branch: true
+          git add \
+            src/resume/cv.en.html \
+            src/resume/cv.sv.html \
+            src/resume/cv.css \
+            src/resume/images/my_pic.jpg \
+            src/resume/my_pic.jpg \
+            dist/resume
+
+          if git diff --cached --quiet; then
+            echo "No CV changes detected. Nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "chore(cv): sync from cv-pdf"
+          git push origin HEAD
