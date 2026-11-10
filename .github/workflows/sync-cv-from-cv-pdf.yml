@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [cv-pdf-updated]
-  schedule:
-    - cron: "15 * * * *"
+ 
 
 permissions:
   contents: write
